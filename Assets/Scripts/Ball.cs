@@ -26,14 +26,12 @@ public class Ball : MonoBehaviour{
         _rigidbody.velocity = launchDirection * _moveSpeed;
     }
 
-    public void ChangeSpeed(float changeAmount, float duration){
-        StartCoroutine(ChangeSpeedForDuration(changeAmount, duration));
-    }
-
-    IEnumerator ChangeSpeedForDuration(float changeAmount, float duration){
+    public void ChangeSpeed(float changeAmount){
         _moveSpeed += changeAmount;
         UpdateVelocity();
-        yield return new WaitForSeconds(duration);
+    }
+
+    public void ResetSpeed(){
         _moveSpeed = _startingSpeed;
         UpdateVelocity();
     }

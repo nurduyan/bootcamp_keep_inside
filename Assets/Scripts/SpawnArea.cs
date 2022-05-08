@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -11,21 +9,30 @@ public class SpawnArea : MonoBehaviour{
     [SerializeField] private float _spawnHeightFromGround;
 
     private BoxCollider _boxCollider;
+    
+    //Bu bölgede bulunan paddleın get methodu
+    public PaddleController GetAreaPaddle(){
+        return _paddle;
+    }
     private void Awake(){
         _boxCollider = GetComponent<BoxCollider>();
     }
-
     private void Start(){
         StartCoroutine(SpawnRandomPickup());
     }
-
+    
+    //Belirtilen süre aralığında sürekli olarak listeden random bir prefabi box collider içindeki random bir noktada spawnlar.
     IEnumerator SpawnRandomPickup(){
-        int randomPickupIndex = Random.Range(0, _pickupPrefabsToSpawn.Length);
-        Vector3 randomSpawnPos = GetRandomPointInsideCollider();
-        Instantiate(_pickupPrefabsToSpawn[randomPickupIndex], randomSpawnPos, Quaternion.identity);
-        yield return new WaitForSeconds(_timeBetweenSpawns);
-        StartCoroutine(SpawnRandomPickup());
+        while (true){
+            int randomPickupIndex = Random.Range(0, _pickupPrefabsToSpawn.Length);
+            Vector3 randomSpawnPos = GetRandomPointInsideCollider();
+            Transform spawnedTransform = Instantiate(_pickupPrefabsToSpawn[randomPickupIndex], randomSpawnPos, Quaternion.identity);
+            spawnedTransform.GetComponent<IPickup>().SetSpawnArea(this);
+            yield return new WaitForSeconds(_timeBetweenSpawns);
+        }
     }
+    
+    //Box colliderın içinde rasgele bir spawn noktası seçer
     private Vector3 GetRandomPointInsideCollider(){
         Vector3 extents = _boxCollider.size / 2f;
         Vector3 point = new Vector3(

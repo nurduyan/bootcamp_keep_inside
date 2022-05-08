@@ -58,8 +58,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e736d5c00f36c8745b76ff637e4bfc2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _paddle: {fileID: 0}
   _pickupPrefabsToSpawn:
   - {fileID: 2406964134692339471, guid: 7dab6e80a843b6e49833e750450aaea8, type: 3}
   - {fileID: 2406964134692339471, guid: 71ea5034845fcb643b745520960954a9, type: 3}
+  - {fileID: 3457142070888339385, guid: 5bd72e221ea01bc41bf29fc01deca735, type: 3}
+  - {fileID: 3457142070888339385, guid: b86ee17c4b8e72c4aba963c1bf4ec241, type: 3}
+  - {fileID: 5333181289974784292, guid: 1946b6a9ba5417f4db829c7505dcccd2, type: 3}
   _timeBetweenSpawns: 12
   _spawnHeightFromGround: 0
