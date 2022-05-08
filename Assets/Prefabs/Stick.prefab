@@ -158,15 +158,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8547355003439731568, guid: 7710d22fdbd032340a240cabc1555998, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.1
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8547355003439731568, guid: 7710d22fdbd032340a240cabc1555998, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8547355003439731568, guid: 7710d22fdbd032340a240cabc1555998, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8547355003439731568, guid: 7710d22fdbd032340a240cabc1555998, type: 3}
       propertyPath: m_LocalPosition.x
@@ -178,7 +178,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8547355003439731568, guid: 7710d22fdbd032340a240cabc1555998, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.42
+      value: 3.41
       objectReference: {fileID: 0}
     - target: {fileID: 8547355003439731568, guid: 7710d22fdbd032340a240cabc1555998, type: 3}
       propertyPath: m_LocalRotation.w
@@ -211,22 +211,6 @@ PrefabInstance:
     - target: {fileID: 8547355003439731569, guid: 7710d22fdbd032340a240cabc1555998, type: 3}
       propertyPath: m_Name
       value: Ball
-      objectReference: {fileID: 0}
-    - target: {fileID: 8547355003439731569, guid: 7710d22fdbd032340a240cabc1555998, type: 3}
-      propertyPath: m_TagString
-      value: Ball
-      objectReference: {fileID: 0}
-    - target: {fileID: 8547355003439731575, guid: 7710d22fdbd032340a240cabc1555998, type: 3}
-      propertyPath: m_UseGravity
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8547355003439731575, guid: 7710d22fdbd032340a240cabc1555998, type: 3}
-      propertyPath: m_Constraints
-      value: 116
-      objectReference: {fileID: 0}
-    - target: {fileID: 8547355003439731575, guid: 7710d22fdbd032340a240cabc1555998, type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7710d22fdbd032340a240cabc1555998, type: 3}
