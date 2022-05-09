@@ -57,3 +57,9 @@ https://trello.com/invite/b/vozFSPdv/a68d3ec2f1dfcec02c9dc36ca107d732/gorev-taki
 
 Product Backlog and Sprints
 https://docs.google.com/spreadsheets/d/1iXzRhY37mvzQiqtxRehngVGtRoRDx62HOrqrxrIYcKY/edit?usp=sharing
+
+
+
+# Sprint 1 #
+
+https://docs.google.com/document/d/1vPld1NLqOdJhzANWDsaHIWlcjlLURxn8JoR8m84ZsYQ/edit?usp=sharing
