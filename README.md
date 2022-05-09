@@ -7,7 +7,9 @@
 
 ## Takım Elemanları ##
 Enis Buğra Bulut: Product Owner
+
 Fatma Nur Duyan: Scrum Master
+
 Niyazi Ural, Ali Safa Gür, Sena Nur Durgunlu: Team Member/Developer
 
 ## Ürün İsmi ##
@@ -21,13 +23,21 @@ Keep Inside
 ## Ürün Özellikleri ##
 
 Farklı arazilerde oynanış farklılığı
+
 Yüksek kalite görsel efektler
+
 Tek dokunuşla kolay kontrol
+
 Bağımlılık yapan oyun mekaniği
+
 Her güncellemede yeni bölümler ve görselleştirme
+
 Bünyesinde barındırdığı challangelar sayesinde oyunculara keyifli vakit sunma
+
 Kazanılan puanlarla elde edilen benzersiz aksesuarlar
+
 “Bir el daha.” Diyeceğiniz sonsuz oyun
+
 Arkadaşlarında seninle bu mücadelede, onlara meydan oku!
 
 
