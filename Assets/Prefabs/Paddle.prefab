@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4608991982587853990}
   - component: {fileID: 444050583381915897}
   m_Layer: 0
-  m_Name: Stick
+  m_Name: Paddle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -142,7 +142,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a9c309240c5a04eaf16201be112edc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _startingBall: {fileID: 8169649062949699363}
+  _attachedBalls:
+  - {fileID: 8169649062949699363}
   _startingBallLaunchAngleRange: 45
   _minReflectingAngle: 30
 --- !u!1001 &575935869678447705

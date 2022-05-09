@@ -65,5 +65,11 @@ MonoBehaviour:
   - {fileID: 3457142070888339385, guid: 5bd72e221ea01bc41bf29fc01deca735, type: 3}
   - {fileID: 3457142070888339385, guid: b86ee17c4b8e72c4aba963c1bf4ec241, type: 3}
   - {fileID: 5333181289974784292, guid: 1946b6a9ba5417f4db829c7505dcccd2, type: 3}
+  - {fileID: 3719371897442284225, guid: 3e5b06edf0f806342a1c3ece6aeed409, type: 3}
+  - {fileID: 3719371897442284225, guid: 643c6183528204b4d846917c38c49ade, type: 3}
+  - {fileID: 5333181289974784292, guid: ca948fd77e24636489cad99d2608357a, type: 3}
+  - {fileID: 3719371897442284225, guid: 004350fc94c0cf34099151ac4ef0631f, type: 3}
+  - {fileID: 5333181289974784292, guid: 980f7bcc982507d459988d2b9ecae155, type: 3}
+  _otherSpawnArea: {fileID: 0}
   _timeBetweenSpawns: 12
   _spawnHeightFromGround: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 986085610395675379}
   - component: {fileID: 558511094847143487}
   - component: {fileID: 4908824277157317230}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FreezePickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}

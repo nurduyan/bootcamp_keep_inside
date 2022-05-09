@@ -129,3 +129,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startingSpeed: 6.5
   _launchInterval: 45
+  _speedUpdateRate: 0.1

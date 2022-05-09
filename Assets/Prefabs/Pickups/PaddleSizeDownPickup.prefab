@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3457142070888339383}
   - component: {fileID: 3457142070888339380}
   - component: {fileID: 3457142070888339381}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: PaddleSizeDownPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -110,5 +110,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f72a9d1b7b54417459485723484376c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sizeChange: 0.7
-  _pickupDuration: 3
+  _sizeChange: 0.6
+  _pickupDuration: 6

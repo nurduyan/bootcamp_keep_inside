@@ -8,6 +8,8 @@ public class Ball : MonoBehaviour{
 
     [SerializeField] private float _startingSpeed;
     [SerializeField] private float _launchInterval;
+    [Tooltip("How long should ball update its speed to avoid slowing down after collisions.(in seconds)")]
+    [SerializeField] private float _speedUpdateRate;
 
     private float _moveSpeed;
     private Rigidbody _rigidbody;
@@ -16,6 +18,9 @@ public class Ball : MonoBehaviour{
     private void Awake(){
         _rigidbody = GetComponent<Rigidbody>();
         _moveSpeed = _startingSpeed;
+    }
+    private void Start(){
+        StartCoroutine(RetainCurrentSpeed());
     }
     public void AttachBall(){
         _rigidbody.isKinematic = true;
@@ -30,12 +35,17 @@ public class Ball : MonoBehaviour{
         _moveSpeed += changeAmount;
         UpdateVelocity();
     }
-
+    
     public void ResetSpeed(){
         _moveSpeed = _startingSpeed;
         UpdateVelocity();
     }
-
+    IEnumerator RetainCurrentSpeed(){
+        while (true){
+            UpdateVelocity();
+            yield return new WaitForSeconds(_speedUpdateRate);
+        }
+    }
     private void UpdateVelocity(){
         _rigidbody.velocity = _moveSpeed * _rigidbody.velocity.normalized;
     }
