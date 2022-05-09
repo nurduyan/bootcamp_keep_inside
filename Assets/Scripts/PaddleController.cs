@@ -8,36 +8,66 @@ using Random = UnityEngine.Random;
 [RequireComponent(typeof(BoxCollider))]
 public class PaddleController : MonoBehaviour{
     [Header("Starting Ball Config")]
-    [SerializeField] private Ball _startingBall;
+    [SerializeField] private List<Ball> _attachedBalls;
+
     [SerializeField] private float _startingBallLaunchAngleRange;
 
     [Header("Paddle Config")]
     [SerializeField] private float _minReflectingAngle;
-    
+
     private BoxCollider _collider;
-    private bool _startingBallAttached = true;
-    
+    private bool _ballAttached = true;
+    private bool _glued = false;
+
     private void Awake(){
         _collider = GetComponent<BoxCollider>();
     }
     private void Start(){
-        //Attach starting ball to this paddle
-        _startingBall.AttachBall();
+        //Attach starting balls to this paddle
+        foreach (Ball ball in _attachedBalls){
+            ball.AttachBall();
+        }
     }
     private void Update(){
-        if(Input.GetKeyDown(KeyCode.Space) && _startingBallAttached){
-            //Launch the starting ball off this paddle with a random angle from forward vector of this paddle 
-            Vector3 launchDirection = Quaternion.AngleAxis(Random.Range(-_startingBallLaunchAngleRange, _startingBallLaunchAngleRange), transform.up) * transform.forward;
-            LaunchBall(launchDirection, _startingBall);
-            //Disable further inputs
-            _startingBallAttached = false;
+        if(Input.GetKeyDown(KeyCode.Space) && _ballAttached){
+            DetachBalls();
         }
+    }
+    public void Glued(float duration){
+        StartCoroutine(GlueForDuration(duration));
+    }
+
+    IEnumerator GlueForDuration(float duration){
+        _glued = true;
+        yield return new WaitForSeconds(duration);
+        _glued = false;
+        if(_ballAttached) DetachBalls();
+    }
+    private void DetachBalls(){
+        //Launch all the balls attached to this paddle off with a random angle from forward vector of this paddle 
+        for (int i = 0; i < _attachedBalls.Count; i++){
+            Vector3 launchDirection =
+                Quaternion.AngleAxis(Random.Range(-_startingBallLaunchAngleRange, _startingBallLaunchAngleRange), transform.up) *
+                transform.forward;
+            LaunchBall(launchDirection, _attachedBalls[i]);
+            _attachedBalls.Remove(_attachedBalls[i]);
+        }
+        //Disable further inputs
+        _ballAttached = false;
     }
     private void LaunchBall(Vector3 launchDirection, Ball ball){
         ball.Launch(launchDirection);
     }
     private void OnCollisionEnter(Collision collision){
-        if(collision.gameObject.CompareTag("Ball")){
+        if(!collision.gameObject.CompareTag("Ball")) return;
+        if(_glued){
+            collision.gameObject.transform.SetParent(transform);
+            Ball newBall = collision.gameObject.GetComponent<Ball>();
+            newBall.AttachBall();
+            _attachedBalls.Add(newBall);
+            _ballAttached = true;
+        }
+        else{
             ContactPoint contactPoint = collision.GetContact(0);
             HandleBallContact(contactPoint, collision.gameObject.GetComponent<Ball>());
         }
@@ -56,10 +86,10 @@ public class PaddleController : MonoBehaviour{
             //and we get 90 - (1 * 60) for example and it gives us 30 which is minReflectingAngle. What this means is if a ball hits far right side of the
             //paddle we'll get 1 from below and the ball will reflect with 30 degrees. If it hits middle we'll get 0 from the below calculation and we'll get
             //90 - (90 - 30)*0 = 90 which means ball will be reflected 90 degrees and so on...
-            Quaternion.AngleAxis((90 - ((90 - _minReflectingAngle) * 
-                //Dividing distance to center to colliders's size at local x axis gives us a value between 0-1 and when we multiply that to leftorright(which is either 1 or -1)
-                //it gives us a value between -1 and 1 acoording to ball's hit location
-                leftOrRight * (distanceToCenter / _collider.size.x)))
+            Quaternion.AngleAxis((90 - ((90 - _minReflectingAngle) *
+                                        //Dividing distance to center to colliders's size at local x axis gives us a value between 0-1 and when we multiply that to leftorright(which is either 1 or -1)
+                                        //it gives us a value between -1 and 1 acoording to ball's hit location
+                                        leftOrRight * (distanceToCenter / _collider.size.x)))
                 , -transform.up) * transform.right;
         LaunchBall(launchDirection, ball);
     }

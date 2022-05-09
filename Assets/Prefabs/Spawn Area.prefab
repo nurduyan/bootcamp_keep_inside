@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3086317872726689044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3086317872726689047}
+  - component: {fileID: 3086317872726689046}
+  - component: {fileID: 3086317872726689045}
+  m_Layer: 0
+  m_Name: Spawn Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3086317872726689047
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3086317872726689044}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.17, y: 0.31, z: -0.54}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3086317872726689046
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3086317872726689044}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 11, y: 0, z: 11}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3086317872726689045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3086317872726689044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e736d5c00f36c8745b76ff637e4bfc2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _paddle: {fileID: 0}
+  _pickupPrefabsToSpawn:
+  - {fileID: 2406964134692339471, guid: 7dab6e80a843b6e49833e750450aaea8, type: 3}
+  - {fileID: 2406964134692339471, guid: 71ea5034845fcb643b745520960954a9, type: 3}
+  - {fileID: 3457142070888339385, guid: 5bd72e221ea01bc41bf29fc01deca735, type: 3}
+  - {fileID: 3457142070888339385, guid: b86ee17c4b8e72c4aba963c1bf4ec241, type: 3}
+  - {fileID: 5333181289974784292, guid: 1946b6a9ba5417f4db829c7505dcccd2, type: 3}
+  - {fileID: 3719371897442284225, guid: 3e5b06edf0f806342a1c3ece6aeed409, type: 3}
+  - {fileID: 3719371897442284225, guid: 643c6183528204b4d846917c38c49ade, type: 3}
+  - {fileID: 5333181289974784292, guid: ca948fd77e24636489cad99d2608357a, type: 3}
+  - {fileID: 3719371897442284225, guid: 004350fc94c0cf34099151ac4ef0631f, type: 3}
+  - {fileID: 5333181289974784292, guid: 980f7bcc982507d459988d2b9ecae155, type: 3}
+  _otherSpawnArea: {fileID: 0}
+  _timeBetweenSpawns: 12
+  _spawnHeightFromGround: 0

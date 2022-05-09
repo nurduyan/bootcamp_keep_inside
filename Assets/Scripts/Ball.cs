@@ -6,14 +6,21 @@ using Random = UnityEngine.Random;
 
 public class Ball : MonoBehaviour{
 
-    [SerializeField] private float _moveSpeed;
+    [SerializeField] private float _startingSpeed;
     [SerializeField] private float _launchInterval;
+    [Tooltip("How long should ball update its speed to avoid slowing down after collisions.(in seconds)")]
+    [SerializeField] private float _speedUpdateRate;
 
+    private float _moveSpeed;
     private Rigidbody _rigidbody;
     private Vector3 _currentDirection = Vector3.zero;
 
     private void Awake(){
         _rigidbody = GetComponent<Rigidbody>();
+        _moveSpeed = _startingSpeed;
+    }
+    private void Start(){
+        StartCoroutine(RetainCurrentSpeed());
     }
     public void AttachBall(){
         _rigidbody.isKinematic = true;
@@ -22,5 +29,24 @@ public class Ball : MonoBehaviour{
         transform.parent = null;
         _rigidbody.isKinematic = false;
         _rigidbody.velocity = launchDirection * _moveSpeed;
+    }
+
+    public void ChangeSpeed(float changeAmount){
+        _moveSpeed += changeAmount;
+        UpdateVelocity();
+    }
+    
+    public void ResetSpeed(){
+        _moveSpeed = _startingSpeed;
+        UpdateVelocity();
+    }
+    IEnumerator RetainCurrentSpeed(){
+        while (true){
+            UpdateVelocity();
+            yield return new WaitForSeconds(_speedUpdateRate);
+        }
+    }
+    private void UpdateVelocity(){
+        _rigidbody.velocity = _moveSpeed * _rigidbody.velocity.normalized;
     }
 }
