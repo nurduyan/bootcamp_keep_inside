@@ -19,6 +19,12 @@ public class PortalPickup : MonoBehaviour, IPickup
         if(other.CompareTag("Ball")){
             other.transform.position = new Vector3(_otherPortal.transform.position.x, other.transform.position.y,
                 _otherPortal.transform.position.z);
+            if(transform.position.x < _otherPortal.transform.position.x){
+                other.GetComponent<Ball>().UpdateSpeedAfterPortal(-90);
+            }
+            else{
+                other.GetComponent<Ball>().UpdateSpeedAfterPortal(90);
+            }
             Destroy(_otherPortal.gameObject);
             Destroy(gameObject);
         }

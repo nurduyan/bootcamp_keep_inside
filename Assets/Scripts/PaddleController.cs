@@ -50,8 +50,8 @@ public class PaddleController : MonoBehaviour{
                 Quaternion.AngleAxis(Random.Range(-_startingBallLaunchAngleRange, _startingBallLaunchAngleRange), transform.up) *
                 transform.forward;
             LaunchBall(launchDirection, _attachedBalls[i]);
-            _attachedBalls.Remove(_attachedBalls[i]);
         }
+        _attachedBalls.Clear();
         //Disable further inputs
         _ballAttached = false;
     }

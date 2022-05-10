@@ -19,9 +19,6 @@ public class Ball : MonoBehaviour{
         _rigidbody = GetComponent<Rigidbody>();
         _moveSpeed = _startingSpeed;
     }
-    private void Start(){
-        StartCoroutine(RetainCurrentSpeed());
-    }
     public void AttachBall(){
         _rigidbody.isKinematic = true;
     }
@@ -29,6 +26,7 @@ public class Ball : MonoBehaviour{
         transform.parent = null;
         _rigidbody.isKinematic = false;
         _rigidbody.velocity = launchDirection * _moveSpeed;
+        StartCoroutine(RetainCurrentSpeed());
     }
 
     public void ChangeSpeed(float changeAmount){
@@ -39,6 +37,9 @@ public class Ball : MonoBehaviour{
     public void ResetSpeed(){
         _moveSpeed = _startingSpeed;
         UpdateVelocity();
+    }
+    public void UpdateSpeedAfterPortal(float angleChange){
+        _rigidbody.velocity = Quaternion.AngleAxis(angleChange, Vector3.up) * _rigidbody.velocity;
     }
     IEnumerator RetainCurrentSpeed(){
         while (true){

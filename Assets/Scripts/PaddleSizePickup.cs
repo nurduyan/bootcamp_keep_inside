@@ -22,14 +22,12 @@ public class PaddleSizePickup : MonoBehaviour, IPickup
         _paddleStartingScale = _paddle.transform.localScale;
     }
     private void OnTriggerEnter(Collider other){
-        if(other.CompareTag("Ball")){
-            StartCoroutine(ChangeSizeForDuration());
+        if(other.CompareTag("Ball")){StartCoroutine(ChangeSizeForDuration());
         }
     }
     
     //Paddleın x eksenindeki boyutunu belirtilen değer oranında belirli süreliğine arttırır ve sonrasında eski haline getirir
     IEnumerator ChangeSizeForDuration(){
-        StopCoroutine(ChangeSizeForDuration());
         Vector3 currentPaddleScale = _paddle.transform.localScale;
         _paddle.transform.localScale = new Vector3(_sizeChange * currentPaddleScale.x, currentPaddleScale.y, currentPaddleScale.z);
         Hide();
