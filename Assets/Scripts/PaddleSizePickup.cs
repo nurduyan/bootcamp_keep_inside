@@ -29,10 +29,10 @@ public class PaddleSizePickup : MonoBehaviour, IPickup
     //Paddleın x eksenindeki boyutunu belirtilen değer oranında belirli süreliğine arttırır ve sonrasında eski haline getirir
     IEnumerator ChangeSizeForDuration(){
         Vector3 currentPaddleScale = _paddle.transform.localScale;
-        _paddle.transform.localScale = new Vector3(_sizeChange * currentPaddleScale.x, currentPaddleScale.y, currentPaddleScale.z);
+        _paddle.SetScale(new Vector3(_sizeChange * currentPaddleScale.x, currentPaddleScale.y, currentPaddleScale.z));
         Hide();
         yield return new WaitForSeconds(_pickupDuration);
-        _paddle.transform.localScale = _paddleStartingScale;
+        _paddle.ResetScale();
         Destroy(gameObject);
     }
     private void Hide(){

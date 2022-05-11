@@ -18,9 +18,11 @@ public class PaddleController : MonoBehaviour{
     private BoxCollider _collider;
     private bool _ballAttached = true;
     private bool _glued = false;
+    private Vector3 _startingScale;
 
     private void Awake(){
         _collider = GetComponent<BoxCollider>();
+        _startingScale = transform.localScale;
     }
     private void Start(){
         //Attach starting balls to this paddle
@@ -36,7 +38,12 @@ public class PaddleController : MonoBehaviour{
     public void Glued(float duration){
         StartCoroutine(GlueForDuration(duration));
     }
-
+    public void SetScale(Vector3 scale){
+        transform.localScale = scale;
+    }
+    public void ResetScale(){
+        transform.localScale = _startingScale;
+    }
     IEnumerator GlueForDuration(float duration){
         _glued = true;
         yield return new WaitForSeconds(duration);
@@ -60,6 +67,8 @@ public class PaddleController : MonoBehaviour{
     }
     private void OnCollisionEnter(Collision collision){
         if(!collision.gameObject.CompareTag("Ball")) return;
+        float angle = Math.Abs(Vector3.Angle(collision.contacts[0].normal, transform.forward));
+        if(angle < (90 - _minReflectingAngle)) return;
         if(_glued){
             collision.gameObject.transform.SetParent(transform);
             Ball newBall = collision.gameObject.GetComponent<Ball>();
@@ -89,7 +98,7 @@ public class PaddleController : MonoBehaviour{
             Quaternion.AngleAxis((90 - ((90 - _minReflectingAngle) *
                                         //Dividing distance to center to colliders's size at local x axis gives us a value between 0-1 and when we multiply that to leftorright(which is either 1 or -1)
                                         //it gives us a value between -1 and 1 acoording to ball's hit location
-                                        leftOrRight * (distanceToCenter / _collider.size.x)))
+                                        leftOrRight * (distanceToCenter / transform.localScale.x)))
                 , -transform.up) * transform.right;
         LaunchBall(launchDirection, ball);
     }
