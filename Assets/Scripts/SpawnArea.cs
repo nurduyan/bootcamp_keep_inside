@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -9,6 +10,7 @@ public class SpawnArea : MonoBehaviour{
     [SerializeField] private SpawnArea _otherSpawnArea;
     [SerializeField] private float _timeBetweenSpawns;
     [SerializeField] private float _spawnHeightFromGround;
+    [SerializeField] private float _maxRandomSpawnTryTime = 0.1f;
 
     private BoxCollider _boxCollider;
     private Coroutine _currentSpawnCoroutine;
@@ -31,10 +33,13 @@ public class SpawnArea : MonoBehaviour{
             int randomPickupIndex = Random.Range(0, _pickupPrefabsToSpawn.Length);
             Vector3 randomSpawnPos = GetRandomPointInsideCollider();
             Transform spawnedTransform = Instantiate(_pickupPrefabsToSpawn[randomPickupIndex], randomSpawnPos, Quaternion.identity);
-            while (Physics.OverlapSphere(randomSpawnPos, spawnedTransform.GetComponent<Collider>().bounds.extents.magnitude, 4).Length > 0){
+            Bounds colliderBounds = spawnedTransform.GetComponent<Collider>().bounds;
+            float maxColliderSize = Math.Max(Mathf.Max(colliderBounds.extents.x, colliderBounds.extents.y), colliderBounds.extents.z);
+            float lookUpTimer = 0f;
+            while (Physics.OverlapSphere(randomSpawnPos, maxColliderSize, 1 << 3).Length > 0 && lookUpTimer < _maxRandomSpawnTryTime){
                 randomSpawnPos = GetRandomPointInsideCollider();
+                lookUpTimer += Time.deltaTime;
             }
-
             spawnedTransform.position = randomSpawnPos;
             spawnedTransform.GetComponent<IPickup>().SetSpawnArea(this);
             PortalPickup portal = spawnedTransform.GetComponent<PortalPickup>();
