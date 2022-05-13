@@ -38,12 +38,46 @@ public class PaddleController : MonoBehaviour{
     public void Glued(float duration){
         StartCoroutine(GlueForDuration(duration));
     }
-    public void SetScale(Vector3 scale){
-        transform.localScale = scale;
+    public Vector3 GetStartingScale(){
+        return _startingScale;
+    }
+    public void SetScale(float changeAmount){
+        MoveForScaleIfNearWall(changeAmount);
+        Vector3 currentPaddleScale = transform.localScale;
+        transform.localScale = new Vector3(changeAmount * currentPaddleScale.x, currentPaddleScale.y, currentPaddleScale.z);
+        PreserveBallsScales();
     }
     public void ResetScale(){
+        float changeAmount = _startingScale.x / transform.localScale.x;
+        MoveForScaleIfNearWall(changeAmount);
         transform.localScale = _startingScale;
+        PreserveBallsScales();
     }
+    private void MoveForScaleIfNearWall(float changeAmount){
+        Vector3 currentPaddleScale = transform.localScale;
+        int leftOrRight = 0;
+        if(IsNearWall(changeAmount, out leftOrRight)){
+            transform.Translate(new Vector3(-leftOrRight * (changeAmount * currentPaddleScale.x - currentPaddleScale.x), 0f, 0f));
+        }
+    }
+    private bool IsNearWall(float changeAmount, out int leftOrRight){
+        Collider[] overlappedColliders = Physics.OverlapSphere(transform.position, changeAmount * transform.localScale.x, 1 << 6);
+        if(overlappedColliders.Length == 0){
+            leftOrRight = 0;
+            return false;
+        }
+        Vector3 perp = Vector3.Cross(transform.forward, overlappedColliders[0].transform.position - transform.position);
+        leftOrRight = System.Math.Sign(Vector3.Dot(perp, transform.up));
+        return true;
+    }
+    private void PreserveBallsScales(){
+        for (int i = 0; i < _attachedBalls.Count; i++){
+            Vector3 attachedBallScale = _attachedBalls[i].transform.localScale;
+            _attachedBalls[i].transform.localScale = new Vector3(attachedBallScale.y * transform.localScale.y / transform.localScale.x,
+                attachedBallScale.y, attachedBallScale.z);
+        }
+    }
+    
     IEnumerator GlueForDuration(float duration){
         _glued = true;
         yield return new WaitForSeconds(duration);

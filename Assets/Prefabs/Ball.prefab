@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8547355003439731574}
   - component: {fileID: 8547355003439731575}
   - component: {fileID: 8547355003439731578}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ball
   m_TagString: Ball
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 8547355003439731569}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8.179999, y: 0.132, z: -6.741}
-  m_LocalScale: {x: 0.60000014, y: 0.6317568, z: 0.60000014}
+  m_LocalScale: {x: 0.60000014, y: 0.6, z: 0.60000014}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

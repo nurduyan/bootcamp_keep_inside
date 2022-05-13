@@ -25,10 +25,10 @@ public class BallSizePickup : MonoBehaviour, IPickup{
 
     //Topun boyutunu belirtilen değer oranında arttırır veya azaltır. Sonrasında ilk haline getirir
     IEnumerator ChangeSizeForDuration(){
-        _pickedupBall.transform.localScale *= _sizeChange;
+        _pickedupBall.ChangeScale(_sizeChange);
         Hide();
         yield return new WaitForSeconds(_pickupDuration);
-        _pickedupBall.transform.localScale = _ballStartingScale;
+        _pickedupBall.ResetScale();
         Destroy(gameObject);
     }
     private void Hide(){
