@@ -110,5 +110,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af0ff9f4af0e0074580b990eb9ebcf57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _extraBallCount: 1
   _defaultBallPrefab: {fileID: 8547355003439731578, guid: 7710d22fdbd032340a240cabc1555998, type: 3}
+  _timeToDestroyWithoutPickup: 7

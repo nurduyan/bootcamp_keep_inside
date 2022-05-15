@@ -8,7 +8,8 @@ public class SpawnArea : MonoBehaviour{
     [SerializeField] private PaddleController _paddle;
     [SerializeField] private Transform[] _pickupPrefabsToSpawn;
     [SerializeField] private SpawnArea _otherSpawnArea;
-    [SerializeField] private float _timeBetweenSpawns;
+    [SerializeField] private float _minSpawnTime;
+    [SerializeField] private float _maxSpawnTime;
     [SerializeField] private float _spawnHeightFromGround;
     [SerializeField] private float _maxRandomSpawnTryTime = 0.1f;
 
@@ -16,20 +17,21 @@ public class SpawnArea : MonoBehaviour{
     private Coroutine _currentSpawnCoroutine;
     
     //Bu bölgede bulunan paddleın get methodu
-    public PaddleController GetAreaPaddle(){
-        return _paddle;
-    }
+    
     private void Awake(){
         _boxCollider = GetComponent<BoxCollider>();
     }
     private void Start(){
         _currentSpawnCoroutine = StartCoroutine(SpawnRandomPickup());
     }
-    
+    public PaddleController GetAreaPaddle(){
+        return _paddle;
+    }
     //Belirtilen süre aralığında sürekli olarak listeden random bir prefabi box collider içindeki random bir noktada spawnlar.
     IEnumerator SpawnRandomPickup(){
         while (true){
-            yield return new WaitForSeconds(_timeBetweenSpawns);
+            float randomSpawnTime = Random.Range(_minSpawnTime, _maxSpawnTime);
+            yield return new WaitForSeconds(randomSpawnTime);
             int randomPickupIndex = Random.Range(0, _pickupPrefabsToSpawn.Length);
             Vector3 randomSpawnPos = GetRandomPointInsideCollider();
             Transform spawnedTransform = Instantiate(_pickupPrefabsToSpawn[randomPickupIndex], randomSpawnPos, Quaternion.identity);

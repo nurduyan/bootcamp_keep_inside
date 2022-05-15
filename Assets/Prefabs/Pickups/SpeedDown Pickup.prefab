@@ -113,3 +113,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speedChange: 0.5
   _pickupDuration: 5
+  _timeToDestroyWithoutPickup: 7

@@ -112,3 +112,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _sizeChange: 0.6
   _pickupDuration: 6
+  _timeToDestroyWithoutPickup: 7

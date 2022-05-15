@@ -5,19 +5,24 @@ using UnityEngine;
 
 public class PaddleFreezePickup : MonoBehaviour, IPickup{
     [SerializeField] private float _pickupDuration;
+    [SerializeField] private float _timeToDestroyWithoutPickup;
 
     private SpawnArea _spawnArea;//Bulunduğumuz bölge
     private Move _paddleMove;//Bulunduğumuz bölgedeki paddle üzerindeki Move componentı
+    private Coroutine _destroyCoroutine;
     
+    private void Start(){
+        _destroyCoroutine = StartCoroutine(DestroyAfterDuration());
+        _paddleMove = _spawnArea.GetAreaPaddle().GetComponent<Move>();
+    }
     //Interface methodu. Bu pickup instantiate edildikten sonra instantiate eden SpawnArea nesnesi tarafından çağrılır
     public void SetSpawnArea(SpawnArea spawnArea){
         _spawnArea = spawnArea;
     }
-    private void Start(){
-        _paddleMove = _spawnArea.GetAreaPaddle().GetComponent<Move>();
-    }
+    
     private void OnTriggerEnter(Collider other){
         if(other.CompareTag("Ball")){
+            StopCoroutine(_destroyCoroutine);
             StartCoroutine(FreezeForDuration());
         }
     }
@@ -28,6 +33,10 @@ public class PaddleFreezePickup : MonoBehaviour, IPickup{
         Hide();
         yield return new WaitForSeconds(_pickupDuration);
         _paddleMove.ResetSpeed();
+        Destroy(gameObject);
+    }
+    IEnumerator DestroyAfterDuration(){
+        yield return new WaitForSeconds(_timeToDestroyWithoutPickup);
         Destroy(gameObject);
     }
     private void Hide(){
