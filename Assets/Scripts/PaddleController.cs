@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(BoxCollider))]
@@ -33,6 +34,8 @@ public class PaddleController : MonoBehaviour{
     private void Update(){
         if(Input.GetKeyDown(KeyCode.Space) && _ballAttached){
             DetachBalls();
+            GameObject.Find("TimerCanvas_UI").transform.GetChild(0).gameObject.transform.GetChild(1).gameObject
+                .GetComponent<Timer>().enabled = true;
         }
     }
     public void Glued(float duration){
