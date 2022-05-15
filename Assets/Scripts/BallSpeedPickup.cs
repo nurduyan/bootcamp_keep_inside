@@ -9,16 +9,22 @@ public class BallSpeedPickup : MonoBehaviour, IPickup {
 
     [SerializeField] private float _speedChange;
     [SerializeField] private float _pickupDuration;
+    [SerializeField] private float _timeToDestroyWithoutPickup;
 
     private Ball _pickedupBall = null;//Bu pickupı triggerlayan top
     private SpawnArea _spawnArea;//Bulunduğumuz bölge
+    private Coroutine _destroyCoroutine;
     
+    private void Start(){
+        _destroyCoroutine = StartCoroutine(DestroyAfterDuration());
+    }
     //Interface methodu. Bu pickup instantiate edildikten sonra instantiate eden SpawnArea nesnesi tarafından çağrılır
     public void SetSpawnArea(SpawnArea spawnArea){
         _spawnArea = spawnArea;
     }
     private void OnTriggerEnter(Collider other){
         if(other.CompareTag("Ball")){
+            StopCoroutine(_destroyCoroutine);
             _pickedupBall = other.GetComponent<Ball>();
             StartCoroutine(ChangeSpeedForDuration());
         }
@@ -31,6 +37,10 @@ public class BallSpeedPickup : MonoBehaviour, IPickup {
         Hide();
         yield return new WaitForSeconds(_pickupDuration);
         _pickedupBall.ResetSpeed();
+        Destroy(gameObject);
+    }
+    IEnumerator DestroyAfterDuration(){
+        yield return new WaitForSeconds(_timeToDestroyWithoutPickup);
         Destroy(gameObject);
     }
     private void Hide(){

@@ -111,4 +111,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dcaaaae72801cb45b5564a3c2134aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _timeToDestroyWithoutPickup: 7
   _pickupDuration: 8

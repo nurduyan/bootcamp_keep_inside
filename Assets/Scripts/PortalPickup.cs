@@ -5,9 +5,14 @@ using UnityEngine;
 
 public class PortalPickup : MonoBehaviour, IPickup
 {
+    [SerializeField] private float _timeToDestroyWithoutPickup;
+    
     private SpawnArea _spawnArea; //Bulunduğumuz bölge
     private PortalPickup _otherPortal;
 
+    private void Start(){
+        StartCoroutine(DestroyAfterDuration());
+    }
     public void SetOtherPortal(PortalPickup portal){
         _otherPortal = portal;
     }
@@ -28,5 +33,9 @@ public class PortalPickup : MonoBehaviour, IPickup
             Destroy(_otherPortal.gameObject);
             Destroy(gameObject);
         }
+    }
+    IEnumerator DestroyAfterDuration(){
+        yield return new WaitForSeconds(_timeToDestroyWithoutPickup);
+        Destroy(gameObject);
     }
 }
