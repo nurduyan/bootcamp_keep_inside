@@ -18,9 +18,11 @@ public class PaddleController : MonoBehaviour{
     private BoxCollider _collider;
     private bool _ballAttached = true;
     private bool _glued = false;
+    private Vector3 _startingScale;
 
     private void Awake(){
         _collider = GetComponent<BoxCollider>();
+        _startingScale = transform.localScale;
     }
     private void Start(){
         //Attach starting balls to this paddle
@@ -36,7 +38,46 @@ public class PaddleController : MonoBehaviour{
     public void Glued(float duration){
         StartCoroutine(GlueForDuration(duration));
     }
-
+    public Vector3 GetStartingScale(){
+        return _startingScale;
+    }
+    public void SetScale(float changeAmount){
+        MoveForScaleIfNearWall(changeAmount);
+        Vector3 currentPaddleScale = transform.localScale;
+        transform.localScale = new Vector3(changeAmount * currentPaddleScale.x, currentPaddleScale.y, currentPaddleScale.z);
+        PreserveBallsScales();
+    }
+    public void ResetScale(){
+        float changeAmount = _startingScale.x / transform.localScale.x;
+        MoveForScaleIfNearWall(changeAmount);
+        transform.localScale = _startingScale;
+        PreserveBallsScales();
+    }
+    private void MoveForScaleIfNearWall(float changeAmount){
+        Vector3 currentPaddleScale = transform.localScale;
+        int leftOrRight = 0;
+        if(IsNearWall(changeAmount, out leftOrRight)){
+            transform.Translate(new Vector3(-leftOrRight * (changeAmount * currentPaddleScale.x - currentPaddleScale.x), 0f, 0f));
+        }
+    }
+    private bool IsNearWall(float changeAmount, out int leftOrRight){
+        Collider[] overlappedColliders = Physics.OverlapSphere(transform.position, changeAmount * transform.localScale.x, 1 << 6);
+        if(overlappedColliders.Length == 0){
+            leftOrRight = 0;
+            return false;
+        }
+        Vector3 perp = Vector3.Cross(transform.forward, overlappedColliders[0].transform.position - transform.position);
+        leftOrRight = System.Math.Sign(Vector3.Dot(perp, transform.up));
+        return true;
+    }
+    private void PreserveBallsScales(){
+        for (int i = 0; i < _attachedBalls.Count; i++){
+            Vector3 attachedBallScale = _attachedBalls[i].transform.localScale;
+            _attachedBalls[i].transform.localScale = new Vector3(attachedBallScale.y * transform.localScale.y / transform.localScale.x,
+                attachedBallScale.y, attachedBallScale.z);
+        }
+    }
+    
     IEnumerator GlueForDuration(float duration){
         _glued = true;
         yield return new WaitForSeconds(duration);
@@ -60,6 +101,8 @@ public class PaddleController : MonoBehaviour{
     }
     private void OnCollisionEnter(Collision collision){
         if(!collision.gameObject.CompareTag("Ball")) return;
+        float angle = Math.Abs(Vector3.Angle(collision.contacts[0].normal, transform.forward));
+        if(angle < (90 - _minReflectingAngle)) return;
         if(_glued){
             collision.gameObject.transform.SetParent(transform);
             Ball newBall = collision.gameObject.GetComponent<Ball>();
@@ -89,7 +132,7 @@ public class PaddleController : MonoBehaviour{
             Quaternion.AngleAxis((90 - ((90 - _minReflectingAngle) *
                                         //Dividing distance to center to colliders's size at local x axis gives us a value between 0-1 and when we multiply that to leftorright(which is either 1 or -1)
                                         //it gives us a value between -1 and 1 acoording to ball's hit location
-                                        leftOrRight * (distanceToCenter / _collider.size.x)))
+                                        leftOrRight * (distanceToCenter / transform.localScale.x)))
                 , -transform.up) * transform.right;
         LaunchBall(launchDirection, ball);
     }
