@@ -15,14 +15,19 @@ public class SpawnArea : MonoBehaviour{
 
     private BoxCollider _boxCollider;
     private Coroutine _currentSpawnCoroutine;
+
+    private bool _spawnStarted = false;
     
     //Bu bölgede bulunan paddleın get methodu
     
     private void Awake(){
         _boxCollider = GetComponent<BoxCollider>();
     }
-    private void Start(){
-        _currentSpawnCoroutine = StartCoroutine(SpawnRandomPickup());
+    public void StartSpawning(){
+        if(!_spawnStarted){
+            _currentSpawnCoroutine = StartCoroutine(SpawnRandomPickup());
+            _spawnStarted = true;
+        }
     }
     public PaddleController GetAreaPaddle(){
         return _paddle;

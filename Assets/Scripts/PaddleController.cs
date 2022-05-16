@@ -10,19 +10,19 @@ using Random = UnityEngine.Random;
 public class PaddleController : MonoBehaviour{
     [Header("Starting Ball Config")]
     [SerializeField] private List<Ball> _attachedBalls;
-
     [SerializeField] private float _startingBallLaunchAngleRange;
 
     [Header("Paddle Config")]
     [SerializeField] private float _minReflectingAngle;
+    [SerializeField] private int _startingOrderNo;
+    [SerializeField] private SpawnArea _spawnArea;
 
-    private BoxCollider _collider;
+    private int _detachInputCount = 0;
     private bool _ballAttached = true;
     private bool _glued = false;
     private Vector3 _startingScale;
 
     private void Awake(){
-        _collider = GetComponent<BoxCollider>();
         _startingScale = transform.localScale;
     }
     private void Start(){
@@ -33,9 +33,12 @@ public class PaddleController : MonoBehaviour{
     }
     private void Update(){
         if(Input.GetKeyDown(KeyCode.Space) && _ballAttached){
-            DetachBalls();
-            GameObject.Find("TimerCanvas_UI").transform.GetChild(0).gameObject.transform.GetChild(1).gameObject
-                .GetComponent<Timer>().enabled = true;
+            _detachInputCount++;
+            if(_detachInputCount >= _startingOrderNo){
+                DetachBalls();
+                FindObjectOfType<TimeManager>().StartTimer();
+                _spawnArea.StartSpawning();
+            }
         }
     }
     public void Glued(float duration){
