@@ -15,6 +15,7 @@ public class TimeManager : MonoBehaviour{
 
     private void Start(){
         _paddleCount = FindObjectsOfType<PaddleController>().Length;
+        _timerUIText.text = "= " + (int)_remainingTime;
     }
     public void StartTimer(){
         _startRequest++;
