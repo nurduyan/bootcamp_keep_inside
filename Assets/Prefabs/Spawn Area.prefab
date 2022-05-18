@@ -60,7 +60,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _paddle: {fileID: 0}
   _pickupPrefabsToSpawn:
+  - {fileID: 3719371897442284225, guid: 643c6183528204b4d846917c38c49ade, type: 3}
+  - {fileID: 3719371897442284225, guid: 3e5b06edf0f806342a1c3ece6aeed409, type: 3}
   - {fileID: 3457142070888339385, guid: 6a19a25565c7a3e4c9ad6aeb9af4b63f, type: 3}
+  - {fileID: 5333181289974784292, guid: ca948fd77e24636489cad99d2608357a, type: 3}
+  - {fileID: 5333181289974784292, guid: 1946b6a9ba5417f4db829c7505dcccd2, type: 3}
+  - {fileID: 3719371897442284225, guid: 004350fc94c0cf34099151ac4ef0631f, type: 3}
+  - {fileID: 3457142070888339385, guid: b86ee17c4b8e72c4aba963c1bf4ec241, type: 3}
+  - {fileID: 3457142070888339385, guid: 5bd72e221ea01bc41bf29fc01deca735, type: 3}
+  - {fileID: 5333181289974784292, guid: 980f7bcc982507d459988d2b9ecae155, type: 3}
+  - {fileID: 2406964134692339471, guid: 71ea5034845fcb643b745520960954a9, type: 3}
+  - {fileID: 2406964134692339471, guid: 7dab6e80a843b6e49833e750450aaea8, type: 3}
   _otherSpawnArea: {fileID: 0}
   _minSpawnTime: 10
   _maxSpawnTime: 20
