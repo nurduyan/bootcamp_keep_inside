@@ -15,7 +15,7 @@ public class TimeManager : MonoBehaviour{
 
     private void Start(){
         _paddleCount = FindObjectsOfType<PaddleController>().Length;
-        _timerUIText.text = "= " + (int)_remainingTime;
+        _timerUIText.text = " " + (int)_remainingTime;
     }
     public void StartTimer(){
         _startRequest++;
@@ -37,8 +37,8 @@ public class TimeManager : MonoBehaviour{
     private void Update(){
         if(_timerRunning){
             _remainingTime -= Time.deltaTime;
-            _timerUIText.text = "= " + (int)_remainingTime;
-            if(_remainingTime <= 0){
+            _timerUIText.text = " " + (int)_remainingTime;
+            if(_remainingTime <= 1){
                 _timerUIText.text = "Time is up!";
                 SceneManager.LoadScene("RetryGameScene");
             }
