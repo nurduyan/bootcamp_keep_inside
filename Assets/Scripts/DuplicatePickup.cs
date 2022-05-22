@@ -11,6 +11,7 @@ public class DuplicatePickup : MonoBehaviour, IPickup{
     [SerializeField] private float _timeToDestroyWithoutPickup;
     private Ball _pickedupBall = null;//Bu pickupı triggerlayan top
     private SpawnArea _spawnArea;//Bulunduğumuz bölge
+    public TransparentWall transparentWall;
     
 
     private void Start(){

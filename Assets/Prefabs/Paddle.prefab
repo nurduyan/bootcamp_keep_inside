@@ -146,6 +146,8 @@ MonoBehaviour:
   - {fileID: 8853183387674128049}
   _startingBallLaunchAngleRange: 45
   _minReflectingAngle: 30
+  _startingOrderNo: 0
+  _spawnArea: {fileID: 0}
 --- !u!1001 &883441600416087499
 PrefabInstance:
   m_ObjectHideFlags: 0
