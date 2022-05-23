@@ -35,7 +35,6 @@ Bünyesinde barındırdığı challangelar sayesinde oyunculara keyifli vakit su
 
 “Bir el daha.” Diyeceğiniz sonsuz oyun
 
-Arkadaşlarında seninle bu mücadelede, onlara meydan oku!
 
 
 ## Hedef Kitle ##
@@ -155,6 +154,8 @@ Görev dağılımları gözden geçirilecek.
 # Sprint 2 #
 
 https://docs.google.com/document/d/1q0SsR5oYMhWRGesZJE0s4OyNTZb9v5BRkwsx_SaOQBU/edit?usp=sharing
+
+Oyunbazlar - Sprint 2
 
 Sprint Notları: Oyun genel anlamda şekillenmeye başladı. Sprint başında eklenen mekanikler üzerinden bölüm tasarımları ve assetler üzerine tasarımlar yapılmaya başlandı. Karşılaşılan buglar gideriliyor ve oyun başlatma, bitirme, tekrar başlama gibi ekran arayüzleri tasarlanıyor. 
 
