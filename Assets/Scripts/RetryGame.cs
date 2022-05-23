@@ -5,17 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class RetryGame : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
-    void Update()
-    {
-        
-    }
-
     public void LoadGame()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("Level 1");
     }
 }

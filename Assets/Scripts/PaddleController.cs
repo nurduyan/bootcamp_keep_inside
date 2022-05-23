@@ -19,6 +19,7 @@ public class PaddleController : MonoBehaviour{
 
     private int _detachInputCount = 0;
     private bool _ballAttached = true;
+    private bool _gameStarted = false;
     private bool _glued = false;
     private Vector3 _startingScale;
 
@@ -32,12 +33,22 @@ public class PaddleController : MonoBehaviour{
         }
     }
     private void Update(){
-        if(Input.GetKeyDown(KeyCode.Space) && _ballAttached){
+        if(Input.GetKeyDown(KeyCode.Space)){
+            if(_gameStarted){
+                if(_ballAttached){
+                    DetachBalls();
+                }
+                return;
+            }
             _detachInputCount++;
-            if(_detachInputCount >= _startingOrderNo){
+            if(_detachInputCount >= _startingOrderNo && _ballAttached){
                 DetachBalls();
                 FindObjectOfType<TimeManager>().StartTimer();
+            }
+
+            if(_detachInputCount >= 2){
                 _spawnArea.StartSpawning();
+                _gameStarted = true;
             }
         }
     }
