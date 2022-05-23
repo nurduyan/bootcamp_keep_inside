@@ -18,11 +18,10 @@ Keep Inside
 
 ## Ürün Açıklaması ##
 
-2 farklı alan içerisinde verilen farklı topları bulundukları alanlar içerisinde tutmaya dayalı bir oyun. Ortadan ikiye bölünerek elde edilmiş farklı zeminlerde çubuk yardımı ile hareketli olan topu belirlenen süre boyunca içeride tutmaya çalışıyorsunuz. Kontrol için sağ/sol ok tuşları ya da A ve D tuşları kullanılıyor. Bölümlerde ilerledikçe zeminlerde, çubuklarda ve toplarda farklı özellikler ortaya çıkıyor. Örneğin çubuğun boyu uzayıp kısalabiliyor, topun boyutunda büyüyüp küçülebiliyor ya da zeminden kaynaklı farklılıklar top hızına etki ederek oyunu zorlaştırıyor. 
+2 farklı alan içerisinde verilen farklı topları bulundukları alanlar içerisinde tutmaya dayalı bir oyun. Ortadan ikiye bölünerek elde edilmiş farklı alanlarda çubuk yardımı ile hareketli olan topu belirlenen süre boyunca içeride tutmaya çalışıyorsunuz. Bölümlerde ilerledikçe çubuklarda ve toplarda farklı özellikler ortaya çıkıyor. Örneğin çubuğun boyu uzayıp kısalabiliyor veya topun hızı farklılaşabiliyor.
+ 
 
 ## Ürün Özellikleri ##
-
-Farklı arazilerde oynanış farklılığı
 
 Yüksek kalite görsel efektler
 
@@ -34,8 +33,6 @@ Her güncellemede yeni bölümler ve görselleştirme
 
 Bünyesinde barındırdığı challangelar sayesinde oyunculara keyifli vakit sunma
 
-Kazanılan puanlarla elde edilen benzersiz aksesuarlar
-
 “Bir el daha.” Diyeceğiniz sonsuz oyun
 
 Arkadaşlarında seninle bu mücadelede, onlara meydan oku!
@@ -44,7 +41,7 @@ Arkadaşlarında seninle bu mücadelede, onlara meydan oku!
 ## Hedef Kitle ##
 
 Oyun seven Oyunbazlar
-Bilgisayar başında keyifli vakit geçirmek isteyenler
+Mobilde keyifli vakit geçirmek isteyenler
 2 farklı oyun alanı içerisinde dikkat ve zaman yönetimini geliştirmek isteyenler
 El göz koordinasyonunu sağlamak amacıyla anaokulu ve ilköğretim çağındaki çocuklar
 
@@ -154,3 +151,46 @@ Bayram dolayısıyla aksayan iletişimin aksamaması konusunda daha dikkatli ola
 Görev dağılımları gözden geçirilecek.
 İlk sprint için verilen görevler zamanında tamamlandı.
 
+
+# Sprint 2 #
+
+https://docs.google.com/document/d/1q0SsR5oYMhWRGesZJE0s4OyNTZb9v5BRkwsx_SaOQBU/edit?usp=sharing
+
+Sprint Notları: Oyun genel anlamda şekillenmeye başladı. Sprint başında eklenen mekanikler üzerinden bölüm tasarımları ve assetler üzerine tasarımlar yapılmaya başlandı. Karşılaşılan buglar gideriliyor ve oyun başlatma, bitirme, tekrar başlama gibi ekran arayüzleri tasarlanıyor. 
+
+Sprint içinde tamamlanması tahmin edilen puan: 120 Puan
+
+Puan tamamlama mantığı: Toplamda proje boyunca tamamlanması gereken 380 puanlık backlog bulunmaktadır. 2. Sprint için belirlenen işler 120 puan değerindedir. Product Owner’ın bu sprint için eklediği ve çıkardığı görevler puanlama sisteminde değişikliğe yol açmamıştır.
+
+Backlog düzeni: 2. Sprint için Product Owner’ın önerisiyle bazı görevler çıkarıldı ve yeni görevler eklendi, puanlandı. Kısa süreli görevler olsa da Product Owner bu görevlerin önemini vurgulamak için ayrıca listelenmesi gerektiği konusunda takım üyelerini ikna etti.
+
+Yapılan bu değişiklikler Trello üzerinden eklenip gerekli ekip üyelerine atandı. Aynı zamanda çıkarılan görevlerde yeni bir liste altında listeleniyor. Yeni listeler açılarak mevcut ve çözülen buglarda bu listelere eklendi.  
+
+Daily Scrum: Daily Scrum toplantılarının Discord üzerinden yapılmasına karar verilmiştir ve Cuma günleri takım için ayrıca toplantı günü ilan edildi. Daily Scrum toplantılarına ek olarak takım sürekli iletişim halinde kalmak için Whatsapp’da kullanmaktadır. Daily Scrum toplantısı örneği jpeg olarak Readme'de tarafımızdan paylaşılmaktadır: 
+
+Sprint 2 Daily Scrum Chat ScreenShots
+
+<img width="1316" alt="Screen Shot 2022-05-22 at 15 10 00" src="https://user-images.githubusercontent.com/96583962/169870349-2dec2f1e-290f-44ce-9e92-e34708b26c22.png">
+<img width="997" alt="Screen Shot 2022-05-23 at 19 58 03" src="https://user-images.githubusercontent.com/96583962/169870674-952a9c11-b0f1-4cdc-ab0c-5e68b5f3c89c.png">
+<img width="989" alt="Screen Shot 2022-05-23 at 19 58 30" src="https://user-images.githubusercontent.com/96583962/169870684-5fd7e35c-872b-40b9-aa7b-7f95609ff8a0.png">
+<img width="1061" alt="Screen Shot 2022-05-23 at 20 00 07" src="https://user-images.githubusercontent.com/96583962/169870872-d159e57d-c1cb-4505-8e7a-27a23edb1a9e.png">
+
+Ürün Fotoğrafları
+
+<img width="825" alt="Screen Shot 2022-05-13 at 21 28 41" src="https://user-images.githubusercontent.com/96583962/169871189-f9916656-14fc-4613-9f1b-9bafa49386fc.png">
+<img width="522" alt="Screen Shot 2022-05-22 at 14 23 09" src="https://user-images.githubusercontent.com/96583962/169871205-2cdc3143-45d4-47bb-abda-bb0fe9d7d308.png">
+
+Sprint board update: Sprint board screenshotları:
+
+<img width="1440" alt="Screen Shot 2022-05-17 at 08 14 41" src="https://user-images.githubusercontent.com/96583962/169871416-1bfc4119-7a49-40ce-a274-a8b9262c2878.png">
+
+<img width="1422" alt="Screen Shot 2022-05-22 at 14 43 47" src="https://user-images.githubusercontent.com/96583962/169871464-375fb67f-1053-4015-a399-b9b66f909af2.png">
+
+Sprint Review: Alınan kararlar: Oyunun başlatma, bitiş ve yeniden başlat arayüzlerine karar verildi ve oluşturuldu ancak gerek görülürse değiştirilebilir. Oyun içerisinde kullanılacak temalara karar verildi bunların oyun içerisine aktarılması gelecek sprinte aktarılabilir. Oyun içerisindeki bugların Trello içerisinde listelenmesi çalışmaları hızlandırıyor.
+
+Sprint Review katılımcıları: Fatma Nur Duyan, Niyazi Ural, Ali Safa Gür, Sena Nur Durgunlu, Enis Buğra Bulut
+
+Sprint Retrospective:
+Github üzerinde daha koordineli çalışıyoruz.
+İkinci sprint için verilen görevler genel olarak zamanında tamamlandı.
+Karşılaşılan buglar Trello listesine eklenmeye devam edecek herkesin erişiminin olması bu konuda oldukça destekleyici.
