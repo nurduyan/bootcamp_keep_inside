@@ -62,7 +62,6 @@ MonoBehaviour:
   _pickupPrefabsToSpawn:
   - {fileID: 3719371897442284225, guid: 643c6183528204b4d846917c38c49ade, type: 3}
   - {fileID: 3719371897442284225, guid: 3e5b06edf0f806342a1c3ece6aeed409, type: 3}
-  - {fileID: 3457142070888339385, guid: 6a19a25565c7a3e4c9ad6aeb9af4b63f, type: 3}
   - {fileID: 5333181289974784292, guid: ca948fd77e24636489cad99d2608357a, type: 3}
   - {fileID: 5333181289974784292, guid: 1946b6a9ba5417f4db829c7505dcccd2, type: 3}
   - {fileID: 3719371897442284225, guid: 004350fc94c0cf34099151ac4ef0631f, type: 3}

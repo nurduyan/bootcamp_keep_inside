@@ -40,7 +40,7 @@ public class TimeManager : MonoBehaviour{
             _timerUIText.text = " " + (int)_remainingTime;
             if(_remainingTime <= 1){
                 _timerUIText.text = "Time is up!";
-                SceneManager.LoadScene("RetryGameScene");
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
     }
