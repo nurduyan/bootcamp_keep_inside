@@ -1628,7 +1628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e736d5c00f36c8745b76ff637e4bfc2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _paddle: {fileID: 444050584497111270}
+  _paddle: {fileID: 444050584031241289}
   _pickupPrefabsToSpawn:
   - {fileID: 3719371897442284225, guid: 643c6183528204b4d846917c38c49ade, type: 3}
   - {fileID: 3719371897442284225, guid: 3e5b06edf0f806342a1c3ece6aeed409, type: 3}
