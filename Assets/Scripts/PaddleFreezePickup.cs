@@ -41,6 +41,9 @@ public class PaddleFreezePickup : MonoBehaviour, IPickup{
     }
     private void Hide(){
         GetComponent<MeshRenderer>().enabled = false;
+        foreach (var renderer in GetComponentsInChildren<Renderer>()){
+            renderer.enabled = false;
+        }
         GetComponent<Collider>().enabled = false;
     }
 }

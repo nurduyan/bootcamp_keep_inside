@@ -39,7 +39,7 @@ public class SpawnArea : MonoBehaviour{
             yield return new WaitForSeconds(randomSpawnTime);
             int randomPickupIndex = Random.Range(0, _pickupPrefabsToSpawn.Length);
             Vector3 randomSpawnPos = GetRandomPointInsideCollider();
-            Transform spawnedTransform = Instantiate(_pickupPrefabsToSpawn[randomPickupIndex], randomSpawnPos, Quaternion.identity);
+            Transform spawnedTransform = Instantiate(_pickupPrefabsToSpawn[randomPickupIndex], randomSpawnPos, _pickupPrefabsToSpawn[randomPickupIndex].rotation);
             Bounds colliderBounds = spawnedTransform.GetComponent<Collider>().bounds;
             float maxColliderSize = Math.Max(Mathf.Max(colliderBounds.extents.x, colliderBounds.extents.y), colliderBounds.extents.z);
             float lookUpTimer = 0f;
