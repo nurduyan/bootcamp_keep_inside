@@ -73,5 +73,5 @@ MonoBehaviour:
   _otherSpawnArea: {fileID: 0}
   _minSpawnTime: 10
   _maxSpawnTime: 20
-  _spawnHeightFromGround: 0
+  _spawnHeightFromGround: 1
   _maxRandomSpawnTryTime: 0.1
