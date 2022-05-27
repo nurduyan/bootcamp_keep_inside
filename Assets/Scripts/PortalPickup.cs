@@ -13,6 +13,9 @@ public class PortalPickup : MonoBehaviour, IPickup
     private void Start(){
         StartCoroutine(DestroyAfterDuration());
     }
+    public SpawnArea GetSpawnArea(){
+        return _spawnArea;
+    }
     public void SetOtherPortal(PortalPickup portal){
         _otherPortal = portal;
     }
@@ -24,12 +27,15 @@ public class PortalPickup : MonoBehaviour, IPickup
         if(other.CompareTag("Ball")){
             other.transform.position = new Vector3(_otherPortal.transform.position.x, other.transform.position.y,
                 _otherPortal.transform.position.z);
+            Ball triggeredBall = other.GetComponent<Ball>();
             if(transform.position.x < _otherPortal.transform.position.x){
-                other.GetComponent<Ball>().UpdateSpeedAfterPortal(-90);
+                triggeredBall.UpdateSpeedAfterPortal(-90);
             }
             else{
-                other.GetComponent<Ball>().UpdateSpeedAfterPortal(90);
+                triggeredBall.UpdateSpeedAfterPortal(90);
             }
+            _spawnArea.RemoveBall(triggeredBall);
+            _otherPortal.GetSpawnArea().AddBall(triggeredBall);
             Destroy(_otherPortal.gameObject);
             Destroy(gameObject);
         }

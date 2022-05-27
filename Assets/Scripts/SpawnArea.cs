@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -13,20 +14,57 @@ public class SpawnArea : MonoBehaviour{
     [SerializeField] private float _spawnHeightFromGround;
     [SerializeField] private float _maxRandomSpawnTryTime = 0.1f;
 
+    private List<Ball> _ballsOnThisArea;
     private BoxCollider _boxCollider;
     private Coroutine _currentSpawnCoroutine;
+    private Coroutine _currentFreezeCoroutine = null;
 
     private bool _spawnStarted = false;
     
     //Bu bölgede bulunan paddleın get methodu
     
     private void Awake(){
+        _ballsOnThisArea = new List<Ball>();
         _boxCollider = GetComponent<BoxCollider>();
     }
     public void StartSpawning(){
         if(!_spawnStarted){
             _currentSpawnCoroutine = StartCoroutine(SpawnRandomPickup());
             _spawnStarted = true;
+        }
+    }
+    public void AddBall(Ball ball){
+        _ballsOnThisArea.Add(ball);
+    }
+    public void RemoveBall(Ball ball){
+        _ballsOnThisArea.Remove(ball);
+    }
+
+    public void FreezeBalls(float duration){
+        if(_ballsOnThisArea.Count > 0){
+            if(_currentFreezeCoroutine != null){
+                StopCoroutine(_currentFreezeCoroutine);
+            }
+            _currentFreezeCoroutine = StartCoroutine(FreezeBallsForDuration(duration));
+        }
+    }
+    IEnumerator FreezeBallsForDuration(float duration){
+        foreach (Ball ball in _ballsOnThisArea){
+            if(!Mathf.Approximately(ball.GetSpeed(),0f)){
+                ball.ChangeSpeed(0);
+            }
+        }
+        TimeManager timeManager = FindObjectOfType<TimeManager>();
+        timeManager.StopTimerBy(gameObject);
+        yield return new WaitForSeconds(duration);
+        foreach (Ball ball in _ballsOnThisArea){
+            if(!ball.IsAttached()){
+                ball.ResetSpeed();
+            }
+        }
+
+        if(timeManager.GetStopper().GetComponent<SpawnArea>() == this){
+            timeManager.StartTimer();
         }
     }
     public PaddleController GetAreaPaddle(){

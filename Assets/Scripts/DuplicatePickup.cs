@@ -28,6 +28,7 @@ public class DuplicatePickup : MonoBehaviour, IPickup{
             Vector3 newBallSpawnPos = new Vector3(transform.position.x, _pickedupBall.transform.position.y, transform.position.z);
             Ball newBall = Instantiate(_defaultBallPrefab, newBallSpawnPos, _pickedupBall.transform.rotation);
             newBall.Launch(new Vector3(Random.Range(-1f, 1f), 0,Random.Range(-1f, 1f)));
+            _spawnArea.AddBall(newBall);
             Destroy(gameObject);
         }
     }

@@ -14,16 +14,23 @@ public class Ball : MonoBehaviour{
     private float _moveSpeed;
     private Rigidbody _rigidbody;
     private Vector3 _startingScale;
+    private Vector3 _recordedVelocity = Vector3.zero;
 
     private void Awake(){
         _rigidbody = GetComponent<Rigidbody>();
-        _moveSpeed = _startingSpeed;
+        _moveSpeed = 0f;
         _startingScale = transform.parent == null ? transform.localScale : Vector3.Scale(transform.localScale, transform.parent.localScale);
     }
     private void Start(){
         if(transform.parent != null){
             IgnoreCollisionWithPaddle(true);
         }
+    }
+    public float GetSpeed(){
+        return _moveSpeed;
+    }
+    public bool IsAttached(){
+        return transform.parent != null;
     }
     public void AttachBall(){
         IgnoreCollisionWithPaddle(true);
@@ -35,6 +42,8 @@ public class Ball : MonoBehaviour{
             IgnoreCollisionWithPaddle(false);
             transform.parent = null;
         }
+
+        _moveSpeed = _startingSpeed;
         _rigidbody.isKinematic = false;
         _rigidbody.velocity = launchDirection * _moveSpeed;
         StartCoroutine(RetainCurrentSpeed());
@@ -42,11 +51,17 @@ public class Ball : MonoBehaviour{
 
     public void ChangeSpeed(float changeAmount){
         _moveSpeed *= changeAmount;
+        if(Mathf.Approximately(_moveSpeed, 0f)){
+            RecordVelocity();
+        }
         UpdateVelocity();
     }
     
     public void ResetSpeed(){
         _moveSpeed = _startingSpeed;
+        if(!_recordedVelocity.Equals(Vector3.zero)){
+            RestoreVelocity();
+        }
         UpdateVelocity();
     }
     public void ChangeScale(float amount){
@@ -73,6 +88,13 @@ public class Ball : MonoBehaviour{
     }
     private void IgnoreCollisionWithPaddle(bool ignore){
         Physics.IgnoreCollision(GetComponent<Collider>(), transform.parent.GetComponent<Collider>(), ignore);
+    }
+    private void RecordVelocity(){
+        _recordedVelocity = _rigidbody.velocity.normalized;
+    }
+    private void RestoreVelocity(){
+        _rigidbody.velocity = _recordedVelocity;
+        _recordedVelocity = Vector3.zero;
     }
     private void UpdateVelocity(){
         _rigidbody.velocity = _moveSpeed * _rigidbody.velocity.normalized;
