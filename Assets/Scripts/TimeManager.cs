@@ -12,6 +12,7 @@ public class TimeManager : MonoBehaviour{
     private bool _timerRunning = false;
     private int _paddleCount;
     private int _startRequest = 0;
+    private GameObject _stopper = null;
 
     private void Start(){
         _paddleCount = FindObjectsOfType<PaddleController>().Length;
@@ -25,6 +26,13 @@ public class TimeManager : MonoBehaviour{
     }
     public void StopTimer(){
         _timerRunning = false;
+    }
+    public void StopTimerBy(GameObject stopper){
+        _timerRunning = false;
+        _stopper = stopper;
+    }
+    public GameObject GetStopper(){
+        return _stopper;
     }
     public void AddTime(float amount){
         _remainingTime += amount;

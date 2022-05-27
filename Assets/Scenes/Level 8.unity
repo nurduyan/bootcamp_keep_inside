@@ -500,6 +500,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5159312894569992256, guid: 0842c5ea143f4b148970ae5d41ceec7a, type: 3}
+      propertyPath: _spawnArea
+      value: 
+      objectReference: {fileID: 1432040049}
     - target: {fileID: 8828814872923310098, guid: 0842c5ea143f4b148970ae5d41ceec7a, type: 3}
       propertyPath: m_Name
       value: TransparentWall
@@ -729,6 +733,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5159312894569992256, guid: 0842c5ea143f4b148970ae5d41ceec7a, type: 3}
+      propertyPath: _spawnArea
+      value: 
+      objectReference: {fileID: 966006447}
     - target: {fileID: 8828814872923310098, guid: 0842c5ea143f4b148970ae5d41ceec7a, type: 3}
       propertyPath: m_Name
       value: TransparentWall (1)
@@ -1528,6 +1536,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 252349364, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1432040049}
+    - target: {fileID: 252349364, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FreezeBalls
+      objectReference: {fileID: 0}
+    - target: {fileID: 1255056797, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 966006447}
+    - target: {fileID: 1255056797, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FreezeBalls
+      objectReference: {fileID: 0}
     - target: {fileID: 6783076171113761925, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
       propertyPath: m_Name
       value: Gameplay UI
@@ -1542,7 +1566,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6783076171113761929, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6783076171113761929, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1803,5 +1827,5 @@ Transform:
   - {fileID: 4290316770503025256}
   - {fileID: 4350862883236149171}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}

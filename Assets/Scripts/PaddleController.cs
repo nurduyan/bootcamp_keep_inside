@@ -30,6 +30,7 @@ public class PaddleController : MonoBehaviour{
         //Attach starting balls to this paddle
         foreach (Ball ball in _attachedBalls){
             ball.AttachBall();
+            _spawnArea.AddBall(ball);
         }
     }
     private void Update(){

@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TransparentWall : MonoBehaviour
-{
+public class TransparentWall : MonoBehaviour{
+    [SerializeField] private SpawnArea _spawnArea;
     public int numberOfBalls;
     private void Start()
     {
@@ -27,6 +27,7 @@ public class TransparentWall : MonoBehaviour
     {
         if (other.gameObject.tag == "Ball")
         {
+            _spawnArea.RemoveBall(other.gameObject.GetComponent<Ball>());
             Destroy(other.gameObject);
             numberOfBalls--;
         }

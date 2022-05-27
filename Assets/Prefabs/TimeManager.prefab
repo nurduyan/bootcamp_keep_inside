@@ -45,4 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _timerUIText: {fileID: 0}
-  _remainingTime: 50
+  _remainingTime: 20
