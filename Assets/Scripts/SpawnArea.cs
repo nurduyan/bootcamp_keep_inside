@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -13,9 +12,11 @@ public class SpawnArea : MonoBehaviour{
     [SerializeField] private float _maxSpawnTime;
     [SerializeField] private float _spawnHeightFromGround;
     [SerializeField] private float _maxRandomSpawnTryTime = 0.1f;
+    [SerializeField] private float _freezeBallsDuration;
 
     private List<Ball> _ballsOnThisArea;
     private BoxCollider _boxCollider;
+    private GameflowManager _gameflowManager;
     private Coroutine _currentSpawnCoroutine;
     private Coroutine _currentFreezeCoroutine = null;
 
@@ -26,6 +27,9 @@ public class SpawnArea : MonoBehaviour{
     private void Awake(){
         _ballsOnThisArea = new List<Ball>();
         _boxCollider = GetComponent<BoxCollider>();
+    }
+    private void Start(){
+        _gameflowManager = FindObjectOfType<GameflowManager>();
     }
     public void StartSpawning(){
         if(!_spawnStarted){
@@ -40,31 +44,42 @@ public class SpawnArea : MonoBehaviour{
         _ballsOnThisArea.Remove(ball);
     }
 
-    public void FreezeBalls(float duration){
-        if(_ballsOnThisArea.Count > 0){
+    public void FreezeBalls(){
+        if(_ballsOnThisArea.Count > 0 && _gameflowManager.GetFreezeBallsCount() > 0){
             if(_currentFreezeCoroutine != null){
                 StopCoroutine(_currentFreezeCoroutine);
             }
-            _currentFreezeCoroutine = StartCoroutine(FreezeBallsForDuration(duration));
+
+            bool allBallsAttached = true;
+            foreach (Ball ball in _ballsOnThisArea){
+                if(!ball.IsAttached()){
+                    allBallsAttached = false;
+                    break;
+                }
+            }
+
+            if(!allBallsAttached){
+                _gameflowManager.UseFreezeBalls();
+                _currentFreezeCoroutine = StartCoroutine(FreezeBallsForDuration());
+            }
         }
     }
-    IEnumerator FreezeBallsForDuration(float duration){
+    IEnumerator FreezeBallsForDuration(){
         foreach (Ball ball in _ballsOnThisArea){
             if(!Mathf.Approximately(ball.GetSpeed(),0f)){
                 ball.ChangeSpeed(0);
             }
         }
-        TimeManager timeManager = FindObjectOfType<TimeManager>();
-        timeManager.StopTimerBy(gameObject);
-        yield return new WaitForSeconds(duration);
+        _gameflowManager.StopTimerBy(gameObject);
+        yield return new WaitForSeconds(_freezeBallsDuration);
         foreach (Ball ball in _ballsOnThisArea){
             if(!ball.IsAttached()){
                 ball.ResetSpeed();
             }
         }
 
-        if(timeManager.GetStopper().GetComponent<SpawnArea>() == this){
-            timeManager.StartTimer();
+        if(_gameflowManager.GetStopper().GetComponent<SpawnArea>() == this){
+            _gameflowManager.StartTimerBy(gameObject);
         }
     }
     public PaddleController GetAreaPaddle(){

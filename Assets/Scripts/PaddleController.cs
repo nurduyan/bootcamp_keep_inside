@@ -1,9 +1,8 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(BoxCollider))]
@@ -16,6 +15,7 @@ public class PaddleController : MonoBehaviour{
     [SerializeField] private float _minReflectingAngle;
     [SerializeField] private int _startingOrderNo;
     [SerializeField] private SpawnArea _spawnArea;
+    [SerializeField] private bool _leftPaddle;
 
     private int _detachInputCount = 0;
     private bool _ballAttached = true;
@@ -34,6 +34,45 @@ public class PaddleController : MonoBehaviour{
         }
     }
     private void Update(){
+        //Touch Input
+        /*if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
+        {
+            Touch touch = Input.GetTouch(0);
+            if(!EventSystem.current.IsPointerOverGameObject(touch.fingerId)){
+                Debug.Log(touch.position.x <= Screen.width / 2);
+                if(touch.position.x <= Screen.width / 2){
+                    if(_leftPaddle){
+                        if(_gameStarted && _ballAttached){
+                            DetachBalls();
+                            return;
+                        }
+                        if(_ballAttached){
+                            DetachBalls();
+                            FindObjectOfType<GameflowManager>().StartTimerBy(_spawnArea.gameObject);
+                        }
+                    }
+                }
+                else{
+                    if(!_leftPaddle){
+                        if(_gameStarted && _ballAttached){
+                            DetachBalls();
+                            return;
+                        }
+                        if(_ballAttached){
+                            DetachBalls();
+                            FindObjectOfType<GameflowManager>().StartTimerBy(_spawnArea.gameObject);
+                        }
+                    }
+                }
+
+                _detachInputCount++;
+                if(_detachInputCount >= 2){
+                    _spawnArea.StartSpawning();
+                    _gameStarted = true;
+                }
+            }
+        }*/
+        //Keyboard Input
         if(Input.GetKeyDown(KeyCode.Space)){
             if(_gameStarted){
                 if(_ballAttached){
@@ -44,7 +83,7 @@ public class PaddleController : MonoBehaviour{
             _detachInputCount++;
             if(_detachInputCount >= _startingOrderNo && _ballAttached){
                 DetachBalls();
-                FindObjectOfType<TimeManager>().StartTimer();
+                FindObjectOfType<GameflowManager>().StartTimerBy(_spawnArea.gameObject);
             }
 
             if(_detachInputCount >= 2){

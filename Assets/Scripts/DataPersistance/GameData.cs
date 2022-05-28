@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 [System.Serializable]
 public class GameData
 {
-    [HideInInspector] public int _lastLevelIndex;
+    public int _lastLevelIndex;
 
     // the values defined in this constructor will be the default values
     // the game starts with when there's no data to load
