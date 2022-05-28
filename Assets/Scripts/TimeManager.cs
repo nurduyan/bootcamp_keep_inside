@@ -6,7 +6,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class TimeManager : MonoBehaviour{
+public class TimeManager : MonoBehaviour,IDataPersistence{
     [SerializeField] private TextMeshProUGUI _timerUIText;
     [SerializeField] private float _remainingTime;
     private bool _timerRunning = false;
@@ -48,8 +48,14 @@ public class TimeManager : MonoBehaviour{
             _timerUIText.text = " " + (int)_remainingTime;
             if(_remainingTime <= 1){
                 _timerUIText.text = "Time is up!";
+                DataPersistenceManager.Instance.SaveGame();
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
+    }
+    public void LoadData(GameData data){
+    }
+    public void SaveData(GameData data){
+        data._lastLevelIndex = Mathf.Min(SceneManager.GetActiveScene().buildIndex + 1, 13);
     }
 }
