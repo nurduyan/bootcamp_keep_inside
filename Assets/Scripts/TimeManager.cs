@@ -48,7 +48,7 @@ public class TimeManager : MonoBehaviour,IDataPersistence{
             _timerUIText.text = " " + (int)_remainingTime;
             if(_remainingTime <= 1){
                 _timerUIText.text = "Time is up!";
-                DataPersistenceManager.Instance.SaveGame();
+                DataPersistenceManager.Instance?.SaveGame();
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
         }
