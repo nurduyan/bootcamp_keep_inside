@@ -75,3 +75,4 @@ MonoBehaviour:
   _maxSpawnTime: 20
   _spawnHeightFromGround: 1
   _maxRandomSpawnTryTime: 0.1
+  _freezeBallsDuration: 2

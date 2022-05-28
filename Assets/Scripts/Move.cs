@@ -1,7 +1,5 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Move : MonoBehaviour{
@@ -20,7 +18,21 @@ public class Move : MonoBehaviour{
     
     private void Update(){
         _movementInput = Input.GetAxisRaw("Horizontal");
-        
+        //Touch Input
+        /*if(Input.touchCount > 0){
+            Touch touch = Input.GetTouch(0);
+            if(!EventSystem.current.IsPointerOverGameObject(touch.fingerId)){
+                if(touch.position.x <= Screen.width / 2){
+                    _movementInput = -1;
+                }
+                else{
+                    _movementInput = 1;
+                }
+            }
+        }
+        else{
+            _movementInput = 0;
+        }*/
     }
 
     private void FixedUpdate(){
