@@ -35,6 +35,9 @@ public class GameflowManager : MonoBehaviour, IDataPersistence{
     public int GetFreezeBallsCount(){
         return _remainingFreezeBallsCount;
     }
+    public int GetRemainingTime(){
+        return (int)_remainingTime;
+    }
     public void UseFreezeBalls(){
         _remainingFreezeBallsCount = Mathf.Max(0, _remainingFreezeBallsCount - 1);
         _remainingFreezeCountText.text = "Freeze: " + _remainingFreezeBallsCount;
