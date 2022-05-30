@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class BallSizePickup : MonoBehaviour, IPickup{
 
+    
     [SerializeField] private float _sizeChange;
     [SerializeField] private float _pickupDuration;
     [SerializeField] private float _timeToDestroyWithoutPickup;

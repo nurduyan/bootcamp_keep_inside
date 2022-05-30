@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4210053152379755239}
   m_Layer: 3
   m_Name: BallSizeUp Pickup
-  m_TagString: Untagged
+  m_TagString: PowerUps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

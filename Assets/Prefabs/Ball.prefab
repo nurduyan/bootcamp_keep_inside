@@ -130,6 +130,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startingSpeed: 10
   _speedUpdateRate: 0.1
+  wallCollisionSound: {fileID: 8771049661112563115, guid: d1552c5c80fe5ac4b9ab4f94282d631d, type: 3}
+  powerupCollisionSound: {fileID: 6789597156703239443, guid: e729abb6394f23f44874db00dbc4d5bb, type: 3}
+  paddleCollisionSound: {fileID: 3578030339134458549, guid: 1134a77e14022df42a97448f771bd8ae, type: 3}
 --- !u!96 &1561150312298165034
 TrailRenderer:
   serializedVersion: 2
