@@ -7,6 +7,9 @@ TagManager:
   - Ball
   - Wall
   - Paddle
+  - PowerUps
+  - Glue
+  - Freeze
   layers:
   - Default
   - TransparentFX

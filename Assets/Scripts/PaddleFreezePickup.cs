@@ -8,10 +8,11 @@ public class PaddleFreezePickup : MonoBehaviour, IPickup{
     private SpawnArea _spawnArea;//Bulunduğumuz bölge
     private Move _paddleMove;//Bulunduğumuz bölgedeki paddle üzerindeki Move componentı
     private Coroutine _destroyCoroutine;
-    
+    private PaddleController _paddle;
     private void Start(){
         _destroyCoroutine = StartCoroutine(DestroyAfterDuration());
         _paddleMove = _spawnArea.GetAreaPaddle().GetComponent<Move>();
+        _paddle = _spawnArea.GetAreaPaddle();
     }
     //Interface methodu. Bu pickup instantiate edildikten sonra instantiate eden SpawnArea nesnesi tarafından çağrılır
     public void SetSpawnArea(SpawnArea spawnArea){
@@ -28,9 +29,11 @@ public class PaddleFreezePickup : MonoBehaviour, IPickup{
     //Belirtilen süre boyunca paddleın hızını 0 yapar ve sonrasında eski haline getirir
     IEnumerator FreezeForDuration(){
         _paddleMove.ChangeSpeed(0);
+        _paddle.transform.GetChild(1).gameObject.SetActive(true);
         Hide();
         yield return new WaitForSeconds(_pickupDuration);
         _paddleMove.ResetSpeed();
+        _paddle.transform.GetChild(1).gameObject.SetActive(false);
         Destroy(gameObject);
     }
     IEnumerator DestroyAfterDuration(){

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7218385513980335186}
   m_Layer: 3
   m_Name: FreezePickup
-  m_TagString: Untagged
+  m_TagString: PowerUps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,6 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pickupDuration: 1.5
   _timeToDestroyWithoutPickup: 20
+  freezeEffect: {fileID: 2568480608324682837, guid: 3b6db46221c36614096b2cd2ab4ae8da, type: 3}
 --- !u!114 &7218385513980335186
 MonoBehaviour:
   m_ObjectHideFlags: 0

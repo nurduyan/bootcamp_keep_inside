@@ -10,6 +10,7 @@ public class PaddleController : MonoBehaviour{
     [Header("Starting Ball Config")]
     [SerializeField] private List<Ball> _attachedBalls;
     [SerializeField] private float _startingBallLaunchAngleRange;
+    [SerializeField] private GameObject glueEffect;
 
     [Header("Paddle Config")]
     [SerializeField] private float _minReflectingAngle;
@@ -137,8 +138,10 @@ public class PaddleController : MonoBehaviour{
     
     IEnumerator GlueForDuration(float duration){
         _glued = true;
+        glueEffect.SetActive(true);
         yield return new WaitForSeconds(duration);
         _glued = false;
+        glueEffect.SetActive(false);
         if(_ballAttached) DetachBalls();
     }
     private void DetachBalls(){

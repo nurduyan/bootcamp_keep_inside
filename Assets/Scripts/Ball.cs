@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -11,6 +12,9 @@ public class Ball : MonoBehaviour{
     private Rigidbody _rigidbody;
     private Vector3 _startingScale;
     private Vector3 _recordedVelocity = Vector3.zero;
+    public AudioSource wallCollisionSound;
+    public AudioSource powerupCollisionSound;
+    public AudioSource paddleCollisionSound;
 
     private void Awake(){
         _rigidbody = GetComponent<Rigidbody>();
@@ -94,5 +98,25 @@ public class Ball : MonoBehaviour{
     }
     private void UpdateVelocity(){
         _rigidbody.velocity = _moveSpeed * _rigidbody.velocity.normalized;
+    }
+
+    public void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.tag == "Wall")
+        {
+            wallCollisionSound.Play();
+        }
+        if (other.gameObject.tag == "Paddle")
+        {
+            paddleCollisionSound.Play();
+        }
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "PowerUps")
+        {
+            powerupCollisionSound.Play();
+        }
     }
 }
