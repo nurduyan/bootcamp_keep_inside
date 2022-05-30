@@ -905,6 +905,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1432040049}
     - target: {fileID: 444050583381915897, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
+      propertyPath: glueEffect
+      value: 
+      objectReference: {fileID: 1255423260}
+    - target: {fileID: 444050583381915897, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: _leftPaddle
       value: 1
       objectReference: {fileID: 0}
@@ -985,6 +989,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a9c309240c5a04eaf16201be112edc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1255423260 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 657605314586997733, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
+  m_PrefabInstance: {fileID: 1255423258}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1268711064
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1223,6 +1232,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 966006447}
     - target: {fileID: 444050583381915897, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
+      propertyPath: glueEffect
+      value: 
+      objectReference: {fileID: 1634369666}
+    - target: {fileID: 444050583381915897, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: _startingOrderNo
       value: 2
       objectReference: {fileID: 0}
@@ -1299,6 +1312,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68a9c309240c5a04eaf16201be112edc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1634369666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 657605314586997733, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
+  m_PrefabInstance: {fileID: 1634369664}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1647245938
 PrefabInstance:
   m_ObjectHideFlags: 0
