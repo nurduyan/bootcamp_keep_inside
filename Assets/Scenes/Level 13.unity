@@ -211,7 +211,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3262197179525258999, guid: 24dbb231d4c985d4183a93ce858bf528, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 3262197179525258999, guid: 24dbb231d4c985d4183a93ce858bf528, type: 3}
       propertyPath: m_AnchorMax.x
@@ -458,7 +458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1394023102284513679, guid: f6f91a8da8c507540ac32f781949d0b8, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 1394023102284513679, guid: f6f91a8da8c507540ac32f781949d0b8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1396,7 +1396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8771049661112563114, guid: d1552c5c80fe5ac4b9ab4f94282d631d, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8771049661112563114, guid: d1552c5c80fe5ac4b9ab4f94282d631d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1639,7 +1639,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6789597156703239440, guid: e729abb6394f23f44874db00dbc4d5bb, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 6789597156703239440, guid: e729abb6394f23f44874db00dbc4d5bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1707,6 +1707,10 @@ PrefabInstance:
       propertyPath: glueEffect
       value: 
       objectReference: {fileID: 1634369666}
+    - target: {fileID: 444050583381915897, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
+      propertyPath: _leftPaddle
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 444050583381915897, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: _startingOrderNo
       value: 2

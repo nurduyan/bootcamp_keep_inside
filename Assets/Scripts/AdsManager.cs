@@ -81,6 +81,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLis
         throw new System.NotImplementedException();
     }
     public void OnUnityAdsShowStart(string placementId){
+        AudioListener.volume = 0;
         Time.timeScale = 0;
     }
     public void OnUnityAdsShowClick(string placementId){
@@ -95,6 +96,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLis
             _interstitialAdLoaded = false;
         }
         Debug.Log("Successfully completed showing ads");
+        AudioListener.volume = 1;
         Time.timeScale = 1;
     }
 

@@ -1382,6 +1382,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1634369666}
     - target: {fileID: 444050583381915897, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
+      propertyPath: _leftPaddle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 444050583381915897, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: _startingOrderNo
       value: 2
       objectReference: {fileID: 0}

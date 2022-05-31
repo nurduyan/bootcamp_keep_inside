@@ -335,7 +335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3262197179525258999, guid: 24dbb231d4c985d4183a93ce858bf528, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3262197179525258999, guid: 24dbb231d4c985d4183a93ce858bf528, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1835,6 +1835,10 @@ PrefabInstance:
       propertyPath: glueEffect
       value: 
       objectReference: {fileID: 1634369666}
+    - target: {fileID: 444050583381915897, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
+      propertyPath: _leftPaddle
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 444050583381915897, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: _startingOrderNo
       value: 2

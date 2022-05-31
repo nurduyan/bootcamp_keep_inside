@@ -29,7 +29,7 @@ public class GameflowManager : MonoBehaviour, IDataPersistence{
 
         _remainingFreezeBallsCount = _startingFreezeBallsCount;
         _paddleCount = FindObjectsOfType<PaddleController>().Length;
-        _timerUIText.text = " " + (int)_remainingTime;
+        _timerUIText.text = ((int)_remainingTime).ToString();
         _remainingFreezeCountText.text = "Freeze: " + _remainingFreezeBallsCount;
     }
     public int GetFreezeBallsCount(){
@@ -83,7 +83,7 @@ public class GameflowManager : MonoBehaviour, IDataPersistence{
     private void Update(){
         if(_timerRunning){
             _remainingTime -= Time.deltaTime;
-            _timerUIText.text = " " + (int)_remainingTime;
+            _timerUIText.text = ((int)_remainingTime).ToString();
             if(_remainingTime <= 1){
                 _timerUIText.text = "Time is up!";
                 if(DataPersistenceManager.Instance != null){

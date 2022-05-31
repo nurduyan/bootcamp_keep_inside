@@ -30,7 +30,7 @@ public class DataPersistenceManager : MonoBehaviour{
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
-
+        Application.targetFrameRate = 60;
         _dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, useEncryption);
     }
     private void Start(){

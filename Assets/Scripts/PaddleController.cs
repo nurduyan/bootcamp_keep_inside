@@ -17,12 +17,14 @@ public class PaddleController : MonoBehaviour{
     [SerializeField] private int _startingOrderNo;
     [SerializeField] private SpawnArea _spawnArea;
     [SerializeField] private bool _leftPaddle;
+    [SerializeField] private float _tapDuration;
 
     private int _detachInputCount = 0;
     private bool _ballAttached = true;
     private bool _gameStarted = false;
     private bool _glued = false;
     private Vector3 _startingScale;
+    private float _touchDuration = 0f;
 
     private void Awake(){
         _startingScale = transform.localScale;
@@ -36,34 +38,23 @@ public class PaddleController : MonoBehaviour{
     }
     private void Update(){
         //Touch Input
-        /*if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-        {
-            Touch touch = Input.GetTouch(0);
-            if(!EventSystem.current.IsPointerOverGameObject(touch.fingerId)){
-                Debug.Log(touch.position.x <= Screen.width / 2);
-                if(touch.position.x <= Screen.width / 2){
-                    if(_leftPaddle){
-                        if(_gameStarted && _ballAttached){
-                            DetachBalls();
-                            return;
-                        }
-                        if(_ballAttached){
-                            DetachBalls();
-                            FindObjectOfType<GameflowManager>().StartTimerBy(_spawnArea.gameObject);
-                        }
-                    }
+        /*bool touchInput = Input.touchCount > 0;
+        if(!touchInput) return;
+        Touch touch = Input.GetTouch(0);
+        if(EventSystem.current.IsPointerOverGameObject(touch.fingerId)) return;
+
+        if(touch.phase == TouchPhase.Moved || Input.GetTouch(0).phase == TouchPhase.Stationary){
+            _touchDuration += Time.deltaTime;
+            return;
+        }
+
+        if(touch.phase == TouchPhase.Ended){
+            if(_touchDuration <= _tapDuration){
+                if(touch.position.x <= Screen.width / 2 && _leftPaddle && _ballAttached){
+                    DetachBalls();
                 }
-                else{
-                    if(!_leftPaddle){
-                        if(_gameStarted && _ballAttached){
-                            DetachBalls();
-                            return;
-                        }
-                        if(_ballAttached){
-                            DetachBalls();
-                            FindObjectOfType<GameflowManager>().StartTimerBy(_spawnArea.gameObject);
-                        }
-                    }
+                else if(touch.position.x > Screen.width / 2 && !_leftPaddle && _ballAttached){
+                    DetachBalls();
                 }
 
                 _detachInputCount++;
@@ -72,6 +63,8 @@ public class PaddleController : MonoBehaviour{
                     _gameStarted = true;
                 }
             }
+
+            _touchDuration = 0f;
         }*/
         //Keyboard Input
         if(Input.GetKeyDown(KeyCode.Space)){
@@ -84,7 +77,6 @@ public class PaddleController : MonoBehaviour{
             _detachInputCount++;
             if(_detachInputCount >= _startingOrderNo && _ballAttached){
                 DetachBalls();
-                FindObjectOfType<GameflowManager>().StartTimerBy(_spawnArea.gameObject);
             }
 
             if(_detachInputCount >= 2){
@@ -155,6 +147,9 @@ public class PaddleController : MonoBehaviour{
         _attachedBalls.Clear();
         //Disable further inputs
         _ballAttached = false;
+        if(!_gameStarted){
+            FindObjectOfType<GameflowManager>().StartTimerBy(_spawnArea.gameObject);
+        }
     }
     private void LaunchBall(Vector3 launchDirection, Ball ball){
         ball.Launch(launchDirection);
