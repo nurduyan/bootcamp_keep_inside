@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id,@string/default_android_client_id,@string/default_web_client_id">
+  <string name="gcm_defaultSenderId" translatable="false">800680651203</string>
+  <string name="google_storage_bucket" translatable="false">unity-bootcamp-keep-inside.appspot.com</string>
+  <string name="project_id" translatable="false">unity-bootcamp-keep-inside</string>
+  <string name="google_api_key" translatable="false">AIzaSyBye8-kspLsPw3FyOxfS7HRgv6gI65-_B8</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBye8-kspLsPw3FyOxfS7HRgv6gI65-_B8</string>
+  <string name="google_app_id" translatable="false">1:800680651203:android:c4e50406541ab06facf576</string>
+  <string name="default_android_client_id" translatable="false">800680651203-nmr0ojcvhfuts6k5cp1gd0bkj03gb6qo.apps.googleusercontent.com</string>
+  <string name="default_web_client_id" translatable="false">800680651203-vl9g24r0kst0lcrcdpd37cutli6m5k1h.apps.googleusercontent.com</string>
+</resources>

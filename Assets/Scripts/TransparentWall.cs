@@ -1,3 +1,4 @@
+using Firebase.Analytics;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,6 +10,9 @@ public class TransparentWall : MonoBehaviour{
             if(AdsManager.Instance != null){
                 AdsManager.Instance.IncLevelPassOrDeath();
             }
+
+            GameflowManager gameflowManager = FindObjectOfType<GameflowManager>();
+            FirebaseAnalytics.LogEvent("died", "remaining_time", gameflowManager != null ? gameflowManager.GetRemainingTime() : -1);
             SceneManager.LoadScene("RetryGameScene");
         }
     }

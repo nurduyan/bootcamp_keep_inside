@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "800680651203",
+    "project_id": "unity-bootcamp-keep-inside",
+    "storage_bucket": "unity-bootcamp-keep-inside.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:800680651203:android:c4e50406541ab06facf576",
+        "android_client_info": {
+          "package_name": "com.Bootcamp.KeepInside"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "800680651203-nmr0ojcvhfuts6k5cp1gd0bkj03gb6qo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.Bootcamp.KeepInside",
+            "certificate_hash": "b0a5ba31a134b992aad23c109fd7479ad25cdd29"
+          }
+        },
+        {
+          "client_id": "800680651203-vl9g24r0kst0lcrcdpd37cutli6m5k1h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBye8-kspLsPw3FyOxfS7HRgv6gI65-_B8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "800680651203-vl9g24r0kst0lcrcdpd37cutli6m5k1h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
