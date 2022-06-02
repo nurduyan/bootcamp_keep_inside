@@ -33,9 +33,6 @@ public class DataPersistenceManager : MonoBehaviour{
         Application.targetFrameRate = 60;
         _dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, useEncryption);
     }
-    private void Start(){
-        LoadGame();
-    }
     private void OnEnable() 
     {
         SceneManager.sceneLoaded += OnSceneLoaded;

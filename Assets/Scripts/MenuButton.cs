@@ -1,14 +1,13 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuButton : MonoBehaviour, IDataPersistence
+public class MenuButton : MonoBehaviour
 {
 	[SerializeField] MenuButtonController menuButtonController;
 	[SerializeField] Animator animator;
 	[SerializeField] AnimatorFunctions animatorFunctions;
 	[SerializeField] int thisIndex;
 
-	private int _levelToLoad;
 	
 	void Update()
     {
@@ -25,15 +24,5 @@ public class MenuButton : MonoBehaviour, IDataPersistence
 			animator.SetBool ("selected", false);
 		}
 		
-		if (Input.GetKeyDown(KeyCode.Space))
-		{
-			SceneManager.LoadScene(_levelToLoad);
-		}
-	}
-	public void LoadData(GameData data){
-		_levelToLoad = data._lastLevelIndex;
-	}
-	public void SaveData(GameData data){
-		//Nothing to save here
 	}
 }
