@@ -96,7 +96,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLis
             _interstitialAdLoaded = false;
         }
         Debug.Log("Successfully completed showing ads");
-        AudioListener.volume = 1;
+        AudioListener.volume = DataPersistenceManager.Instance.LoadVolumePref();
         Time.timeScale = 1;
     }
 

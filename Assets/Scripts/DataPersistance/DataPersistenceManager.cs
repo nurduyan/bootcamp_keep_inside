@@ -46,6 +46,7 @@ public class DataPersistenceManager : MonoBehaviour{
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode) 
     {
         _dataPersistenceObjects = FindAllDataPersistenceObjects();
+        AudioListener.volume = LoadVolumePref();
     }
     
     public void NewGame(){
@@ -88,7 +89,12 @@ public class DataPersistenceManager : MonoBehaviour{
         // save that data to a file using the data handler
         _dataHandler.Save(_gameData);
     }
-
+    public void SaveVolumePref(float volume){
+        PlayerPrefs.SetFloat("volume", volume);
+    }
+    public float LoadVolumePref(){
+        return PlayerPrefs.GetFloat("volume");
+    }
     private List<IDataPersistence> FindAllDataPersistenceObjects(){
         IEnumerable<IDataPersistence> dataPersistenceObjects = FindObjectsOfType<MonoBehaviour>().OfType<IDataPersistence>();
 
