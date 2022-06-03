@@ -30,7 +30,7 @@ public class GameflowManager : MonoBehaviour, IDataPersistence{
         _remainingFreezeBallsCount = _startingFreezeBallsCount;
         _paddleCount = FindObjectsOfType<PaddleController>().Length;
         _timerUIText.text = ((int)_remainingTime).ToString();
-        _remainingFreezeCountText.text = "Freeze: " + _remainingFreezeBallsCount;
+        _remainingFreezeCountText.text = ": " + _remainingFreezeBallsCount;
     }
     public int GetFreezeBallsCount(){
         return _remainingFreezeBallsCount;
@@ -40,11 +40,11 @@ public class GameflowManager : MonoBehaviour, IDataPersistence{
     }
     public void UseFreezeBalls(){
         _remainingFreezeBallsCount = Mathf.Max(0, _remainingFreezeBallsCount - 1);
-        _remainingFreezeCountText.text = "Freeze: " + _remainingFreezeBallsCount;
+        _remainingFreezeCountText.text = ": " + _remainingFreezeBallsCount;
     }
     public void AddFreezeBallsCount(){
         _remainingFreezeBallsCount += _rewardedAdFreezeRewardAmount;
-        _remainingFreezeCountText.text = "Freeze: " + _remainingFreezeBallsCount;
+        _remainingFreezeCountText.text = ": " + _remainingFreezeBallsCount;
     }
     public void StartTimerBy(GameObject starter){
         if(_starter != starter || _gameStarted){
@@ -85,7 +85,7 @@ public class GameflowManager : MonoBehaviour, IDataPersistence{
             _remainingTime -= Time.deltaTime;
             _timerUIText.text = ((int)_remainingTime).ToString();
             if(_remainingTime <= 1){
-                _timerUIText.text = "Time is up!";
+                _timerUIText.text = "";
                 if(DataPersistenceManager.Instance != null){
                     DataPersistenceManager.Instance.SaveGame();
                 }

@@ -269,6 +269,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 8bc9fbb733295c54fb88c338ef8a0838, type: 2}
+    - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
+      propertyPath: wallCollisionSound
+      value: 
+      objectReference: {fileID: 1190223945}
+    - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
+      propertyPath: paddleCollisionSound
+      value: 
+      objectReference: {fileID: 2008312654}
+    - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
+      propertyPath: powerupCollisionSound
+      value: 
+      objectReference: {fileID: 943721571}
     - target: {fileID: 8853183387674128062, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -1423,6 +1435,17 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3262197180769452468, guid: 24dbb231d4c985d4183a93ce858bf528, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 24dbb231d4c985d4183a93ce858bf528, type: 3}
+--- !u!114 &1335790226 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3262197179525259000, guid: 24dbb231d4c985d4183a93ce858bf528, type: 3}
+  m_PrefabInstance: {fileID: 1335790225}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2733e931e869654eaf1f460c6e2f34d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1432040048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1834,7 +1857,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8711938621485581803}
   m_LocalRotation: {x: 0, y: -0.8660254, z: 0.5, w: 0}
-  m_LocalPosition: {x: 0.88784605, y: 14.147008, z: 9.664777}
+  m_LocalPosition: {x: 0, y: 14.147008, z: 9.664777}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2184,42 +2207,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 252349363, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 31.400024
-      objectReference: {fileID: 0}
-    - target: {fileID: 252349364, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1432040049}
-    - target: {fileID: 252349364, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: FreezeBalls
-      objectReference: {fileID: 0}
-    - target: {fileID: 1255056797, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1255056797, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 966006447}
-    - target: {fileID: 1255056797, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: FreezeBalls
-      objectReference: {fileID: 0}
-    - target: {fileID: 5771035137509572982, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5771035137509572982, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1432040049}
-    - target: {fileID: 5771035137509572982, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: FreezeBalls
-      objectReference: {fileID: 0}
     - target: {fileID: 6783076171113761925, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
       propertyPath: m_Name
       value: Gameplay UI
@@ -2312,18 +2307,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 3007160511503719890}
-    - target: {fileID: 8176379221434818484, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PlayRewardedAd
-      objectReference: {fileID: 0}
-    - target: {fileID: 8176379221434818484, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: GameflowManager, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 8176379221434818484, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
+    - target: {fileID: 8399565851119634161, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1335790226}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
 --- !u!114 &6783076170732479251 stripped
