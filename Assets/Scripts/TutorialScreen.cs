@@ -29,6 +29,9 @@ public class TutorialScreen : MonoBehaviour{
         _leftFreezeButton.interactable = false;
         _rightFreezeButton.interactable = false;
         Time.timeScale = 0;
+        foreach (PaddleController paddle in FindObjectsOfType<PaddleController>()){
+            paddle.DisableControls();
+        }
         _firstTutorialScreen.SetActive(true);
     }
     public void ShowSecondScreen(){
@@ -55,5 +58,8 @@ public class TutorialScreen : MonoBehaviour{
         _rightFreezeButton.interactable = true;
         _rewardedAdButton.interactable = true;
         Time.timeScale = 1;
+        foreach (PaddleController paddle in FindObjectsOfType<PaddleController>()){
+            paddle.EnableControls(1);
+        }
     }
 }
