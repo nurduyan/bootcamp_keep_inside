@@ -33,7 +33,7 @@ public class BallSpeedPickup : MonoBehaviour, IPickup {
         Hide();
         yield return new WaitForSeconds(_pickupDuration);
         if(!Mathf.Approximately(_pickedupBall.GetSpeed(), 0f)){
-            _pickedupBall.ResetSpeed();
+            _pickedupBall.ChangeSpeed(1/_speedChange);
         }
         Destroy(gameObject);
     }

@@ -37,13 +37,16 @@ public class Ball : MonoBehaviour{
         _rigidbody.isKinematic = true;
         
     }
-    public void Launch(Vector3 launchDirection){
+    public void Launch(Vector3 launchDirection, bool defaultSpeed){
         if(transform.parent != null){
             IgnoreCollisionWithPaddle(false);
             transform.parent = null;
         }
 
-        _moveSpeed = _startingSpeed;
+        if(defaultSpeed){
+            _moveSpeed = _startingSpeed;
+        }
+
         _rigidbody.isKinematic = false;
         _rigidbody.velocity = launchDirection * _moveSpeed;
         StartCoroutine(RetainCurrentSpeed());

@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(BoxCollider))]
@@ -37,8 +36,28 @@ public class PaddleController : MonoBehaviour{
         }
     }
     private void Update(){
+#if UNITY_EDITOR
+        //Keyboard Input
+        if(Input.GetKeyDown(KeyCode.Space)){
+            if(_gameStarted){
+                if(_ballAttached){
+                    DetachBalls();
+                }
+                return;
+            }
+            _detachInputCount++;
+            if(_detachInputCount >= _startingOrderNo && _ballAttached){
+                DetachBalls();
+            }
+
+            if(_detachInputCount >= 2){
+                _spawnArea.StartSpawning();
+                _gameStarted = true;
+            }
+        }
+#else
         //Touch Input
-        /*bool touchInput = Input.touchCount > 0;
+        bool touchInput = Input.touchCount > 0;
         if(!touchInput) return;
         Touch touch = Input.GetTouch(0);
         if(EventSystem.current.IsPointerOverGameObject(touch.fingerId)) return;
@@ -65,32 +84,13 @@ public class PaddleController : MonoBehaviour{
             }
 
             _touchDuration = 0f;
-        }*/
-        //Keyboard Input
-        if(Input.GetKeyDown(KeyCode.Space)){
-            if(_gameStarted){
-                if(_ballAttached){
-                    DetachBalls();
-                }
-                return;
-            }
-            _detachInputCount++;
-            if(_detachInputCount >= _startingOrderNo && _ballAttached){
-                DetachBalls();
-            }
-
-            if(_detachInputCount >= 2){
-                _spawnArea.StartSpawning();
-                _gameStarted = true;
-            }
         }
+#endif
     }
     public void Glued(float duration){
         StartCoroutine(GlueForDuration(duration));
     }
-    public Vector3 GetStartingScale(){
-        return _startingScale;
-    }
+    
     public void SetScale(float changeAmount){
         MoveForScaleIfNearWall(changeAmount);
         Vector3 currentPaddleScale = transform.localScale;
@@ -142,7 +142,7 @@ public class PaddleController : MonoBehaviour{
             Vector3 launchDirection =
                 Quaternion.AngleAxis(Random.Range(-_startingBallLaunchAngleRange, _startingBallLaunchAngleRange), transform.up) *
                 transform.forward;
-            LaunchBall(launchDirection, _attachedBalls[i]);
+            LaunchBall(launchDirection, _attachedBalls[i], true);
         }
         _attachedBalls.Clear();
         //Disable further inputs
@@ -151,8 +151,8 @@ public class PaddleController : MonoBehaviour{
             FindObjectOfType<GameflowManager>().StartTimerBy(_spawnArea.gameObject);
         }
     }
-    private void LaunchBall(Vector3 launchDirection, Ball ball){
-        ball.Launch(launchDirection);
+    private void LaunchBall(Vector3 launchDirection, Ball ball, bool defaultSpeed){
+        ball.Launch(launchDirection, defaultSpeed);
     }
     private void OnCollisionEnter(Collision collision){
         if(!collision.gameObject.CompareTag("Ball")) return;
@@ -189,6 +189,6 @@ public class PaddleController : MonoBehaviour{
                                         //it gives us a value between -1 and 1 acoording to ball's hit location
                                         leftOrRight * (distanceToCenter / transform.localScale.x)))
                 , -transform.up) * transform.right;
-        LaunchBall(launchDirection, ball);
+        LaunchBall(launchDirection, ball, false);
     }
 }

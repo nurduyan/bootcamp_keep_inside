@@ -44,6 +44,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Tutorial Screen
+    uniqueID: 1316242371
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

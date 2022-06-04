@@ -23,6 +23,10 @@ public class Options : MonoBehaviour, IDataPersistence{
     {
         SceneManager.LoadScene(_levelToLoad);
     }
+    public void StartNewGame(){
+        DataPersistenceManager.Instance.StartNewGame();
+        StartGameButton();
+    }
 
     public void OptionsGameButton()
     {

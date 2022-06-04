@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 public class Move : MonoBehaviour{
     [Header("Config")]
     [SerializeField] private float _startingSpeed;
-    
+
     private Rigidbody _rigidbody;
     private float _movementInput = 0f;
     private float _moveSpeed;
@@ -15,11 +15,13 @@ public class Move : MonoBehaviour{
         _moveSpeed = _startingSpeed;
     }
 
-    
+
     private void Update(){
+#if UNITY_EDITOR
         _movementInput = Input.GetAxisRaw("Horizontal");
+#else
         //Touch Input
-        /*if(Input.touchCount > 0){
+        if(Input.touchCount > 0){
             Touch touch = Input.GetTouch(0);
             if(!EventSystem.current.IsPointerOverGameObject(touch.fingerId)){
                 if(touch.position.x <= Screen.width / 2){
@@ -32,7 +34,8 @@ public class Move : MonoBehaviour{
         }
         else{
             _movementInput = 0;
-        }*/
+        }
+#endif
     }
 
     private void FixedUpdate(){

@@ -45,7 +45,10 @@ public class FileDataHandler{
 
         return loadedData;
     }
-
+    public bool HasSaveData(){
+        string fullPath = Path.Combine(_dataDirPath, _dataFileName);
+        return File.Exists(fullPath);
+    }
     public void Save(GameData data){
         // use Path.Combine to account for different OS's having different path separators
         string fullPath = Path.Combine(_dataDirPath, _dataFileName);

@@ -30,6 +30,10 @@ public class DataPersistenceManager : MonoBehaviour{
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+
+        if(!PlayerPrefs.HasKey("first_start")){
+            PlayerPrefs.SetInt("first_start", 1);
+        }
         Application.targetFrameRate = 60;
         _dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, useEncryption);
     }
@@ -51,6 +55,12 @@ public class DataPersistenceManager : MonoBehaviour{
     
     public void NewGame(){
         _gameData = new GameData();
+    }
+    public void StartNewGame(){
+        NewGame();
+        SaveGame();
+        LoadGame();
+        PlayerPrefs.SetInt("first_start", 1);
     }
 
     public void LoadGame(){
@@ -88,6 +98,9 @@ public class DataPersistenceManager : MonoBehaviour{
 
         // save that data to a file using the data handler
         _dataHandler.Save(_gameData);
+    }
+    public bool HasSaveData(){
+        return _dataHandler.HasSaveData();
     }
     public void SaveVolumePref(float volume){
         PlayerPrefs.SetFloat("volume", volume);
