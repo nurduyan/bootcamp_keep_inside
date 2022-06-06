@@ -46,6 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _timerUIText: {fileID: 0}
   _remainingFreezeCountText: {fileID: 0}
-  _remainingTime: 20
+  _remainingTime: 35
   _startingFreezeBallsCount: 3
   _rewardedAdFreezeRewardAmount: 2

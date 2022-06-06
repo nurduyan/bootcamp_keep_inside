@@ -8,6 +8,7 @@ public class GameflowManager : MonoBehaviour, IDataPersistence{
     [SerializeField] private float _remainingTime;
     [SerializeField] private int _startingFreezeBallsCount;
     [SerializeField] private int _rewardedAdFreezeRewardAmount;
+    [SerializeField] private GameObject _levelCompleteScreen;
 
     private int _remainingFreezeBallsCount;
     private int _paddleCount;
@@ -84,17 +85,13 @@ public class GameflowManager : MonoBehaviour, IDataPersistence{
         if(_timerRunning){
             _remainingTime -= Time.deltaTime;
             _timerUIText.text = ((int)_remainingTime).ToString();
-            if(_remainingTime <= 1){
+            if(_remainingTime <= 0){
                 _timerUIText.text = "";
                 if(DataPersistenceManager.Instance != null){
                     DataPersistenceManager.Instance.SaveGame();
                 }
 
-                if(AdsManager.Instance != null){
-                    AdsManager.Instance.IncLevelPassOrDeath();
-                }
-
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                _levelCompleteScreen.SetActive(true);
             }
         }
     }

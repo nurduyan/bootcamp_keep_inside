@@ -44,6 +44,9 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
+        foreach (PaddleController paddle in FindObjectsOfType<PaddleController>()){
+            paddle.DisableControls();
+        }
         IsGamePaused = true;
         timer_text.SetActive(false);
         LeftFreeze.SetActive(false);
@@ -55,6 +58,9 @@ public class PauseMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Scenes/Menu");
         Time.timeScale = 1f;
+        foreach (PaddleController paddle in FindObjectsOfType<PaddleController>()){
+            paddle.EnableControls(0);
+        }
     }
 
     public void QuitGame()

@@ -9,6 +9,7 @@ public class Move : MonoBehaviour{
     private Rigidbody _rigidbody;
     private float _movementInput = 0f;
     private float _moveSpeed;
+    private bool _controllable = true;
 
     private void Awake(){
         _rigidbody = GetComponent<Rigidbody>();
@@ -17,8 +18,9 @@ public class Move : MonoBehaviour{
 
 
     private void Update(){
+        if(Time.timeScale > 0){
 #if UNITY_EDITOR
-        _movementInput = Input.GetAxisRaw("Horizontal");
+            _movementInput = Input.GetAxisRaw("Horizontal");
 #else
         //Touch Input
         if(Input.touchCount > 0){
@@ -36,6 +38,7 @@ public class Move : MonoBehaviour{
             _movementInput = 0;
         }
 #endif
+        }
     }
 
     private void FixedUpdate(){
@@ -46,5 +49,11 @@ public class Move : MonoBehaviour{
     }
     public void ResetSpeed(){
         _moveSpeed = _startingSpeed;
+    }
+    public void EnableControls(){
+        _controllable = true;
+    }
+    public void DisableControls(){
+        _controllable = false;
     }
 }

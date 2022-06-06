@@ -83,6 +83,9 @@ public class AdsManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLis
     public void OnUnityAdsShowStart(string placementId){
         AudioListener.volume = 0;
         Time.timeScale = 0;
+        foreach (PaddleController paddle in FindObjectsOfType<PaddleController>()){
+            paddle.DisableControls();
+        }
     }
     public void OnUnityAdsShowClick(string placementId){
         throw new System.NotImplementedException();
@@ -98,6 +101,9 @@ public class AdsManager : MonoBehaviour, IUnityAdsLoadListener, IUnityAdsShowLis
         Debug.Log("Successfully completed showing ads");
         AudioListener.volume = DataPersistenceManager.Instance.LoadVolumePref();
         Time.timeScale = 1;
+        foreach (PaddleController paddle in FindObjectsOfType<PaddleController>()){
+            paddle.EnableControls(0.5f);
+        }
     }
 
     private void RewardUser(){

@@ -152,7 +152,7 @@ MonoBehaviour:
   _startingOrderNo: 1
   _spawnArea: {fileID: 0}
   _leftPaddle: 1
-  _tapDuration: 0.2
+  _tapDuration: 0.07
 --- !u!1001 &908058524
 PrefabInstance:
   m_ObjectHideFlags: 0

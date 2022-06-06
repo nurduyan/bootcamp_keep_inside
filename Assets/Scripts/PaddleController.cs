@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using Random = UnityEngine.Random;
 
 [RequireComponent(typeof(BoxCollider))]
@@ -19,6 +20,7 @@ public class PaddleController : MonoBehaviour{
     [SerializeField] private float _tapDuration;
 
     private int _detachInputCount = 0;
+    private bool _controllable = false;
     private bool _ballAttached = true;
     private bool _gameStarted = false;
     private bool _glued = false;
@@ -34,27 +36,31 @@ public class PaddleController : MonoBehaviour{
             ball.AttachBall();
             _spawnArea.AddBall(ball);
         }
+        EnableControls(1.5f);
     }
     private void Update(){
+        if(_controllable){
 #if UNITY_EDITOR
-        //Keyboard Input
-        if(Input.GetKeyDown(KeyCode.Space)){
-            if(_gameStarted){
-                if(_ballAttached){
+            //Keyboard Input
+            if(Input.GetKeyDown(KeyCode.Space)){
+                if(_gameStarted){
+                    if(_ballAttached){
+                        DetachBalls();
+                    }
+
+                    return;
+                }
+
+                _detachInputCount++;
+                if(_detachInputCount >= _startingOrderNo && _ballAttached){
                     DetachBalls();
                 }
-                return;
-            }
-            _detachInputCount++;
-            if(_detachInputCount >= _startingOrderNo && _ballAttached){
-                DetachBalls();
-            }
 
-            if(_detachInputCount >= 2){
-                _spawnArea.StartSpawning();
-                _gameStarted = true;
+                if(_detachInputCount >= 2){
+                    _spawnArea.StartSpawning();
+                    _gameStarted = true;
+                }
             }
-        }
 #else
         //Touch Input
         bool touchInput = Input.touchCount > 0;
@@ -86,6 +92,20 @@ public class PaddleController : MonoBehaviour{
             _touchDuration = 0f;
         }
 #endif
+        }
+    }
+
+    public void DisableControls(){
+        _controllable = false;
+        GetComponent<Move>().DisableControls();
+    }
+    public void EnableControls(float time){
+        StartCoroutine(EnableControlsAfterDuration(time));
+    }
+    IEnumerator EnableControlsAfterDuration(float duration){
+        yield return new WaitForSeconds(duration);
+        _controllable = true;
+        GetComponent<Move>().DisableControls();
     }
     public void Glued(float duration){
         StartCoroutine(GlueForDuration(duration));
