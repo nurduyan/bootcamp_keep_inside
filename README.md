@@ -6,11 +6,15 @@
 # Ürün İle İlgili Bilgiler #
 
 ## Takım Elemanları ##
-Enis Buğra Bulut: Product Owner
+[Enis Buğra Bulut](https://www.linkedin.com/in/enis-bu%C4%9Fra-bulut-a86067227/ "enisbuğrabulut")  Product Owner
 
-Fatma Nur Duyan: Scrum Master
+[Fatma Nur Duyan](https://www.linkedin.com/in/fatmanurduyan/ "fatma nur duyan") Scrum Master 
 
-Niyazi Ural, Ali Safa Gür, Sena Nur Durgunlu: Team Member/Developer
+[Niyazi Ural](https://www.linkedin.com/in/niyazi-ural-824238145/ "niyazi ural") Developer
+
+[Ali Safa Gür](https://www.linkedin.com/in/ali-g%C3%BCr-b90224227/ "ali safa gür") Developer
+
+Sena Nur Durgunlu Developer
 
 ## Ürün İsmi ##
 
