@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdc58e3392c0a654c83be502630ddf34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedChange: 1.4
+  _speedChange: 1.3
   _pickupDuration: 5
   _timeToDestroyWithoutPickup: 20
 --- !u!135 &1743647816

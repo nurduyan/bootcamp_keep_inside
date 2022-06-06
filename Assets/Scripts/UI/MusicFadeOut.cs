@@ -7,17 +7,22 @@ public class MusicFadeOut : MonoBehaviour{
     [SerializeField] private float _fadeOutStartTime;
     [SerializeField] private float _fadeOutDuration;
     [SerializeField] private float _targetVolume;
-    private void Start(){
-        StartCoroutine(StartFade(GetComponent<AudioSource>()));
+
+    private AudioSource _audioSource;
+    private void Awake(){
+        _audioSource = GetComponent<AudioSource>();
     }
-    private IEnumerator StartFade(AudioSource audioSource){
-        yield return new WaitForSeconds(_fadeOutStartTime);
+    private void Start(){
+        StartCoroutine(StartFade());
+    }
+    private IEnumerator StartFade(){
         float currentTime = 0;
-        float start = audioSource.volume;
+        yield return new WaitForSeconds(_fadeOutStartTime);
+        float start = _audioSource.volume;
         while (currentTime < _fadeOutDuration)
         {
             currentTime += Time.deltaTime;
-            audioSource.volume = Mathf.Lerp(start, _targetVolume, currentTime / _fadeOutDuration);
+            _audioSource.volume = Mathf.Lerp(start, _targetVolume, currentTime / _fadeOutDuration);
             yield return null;
         }
     }

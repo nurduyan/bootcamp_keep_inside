@@ -106,6 +106,6 @@ public class GameflowManager : MonoBehaviour, IDataPersistence{
     public void LoadData(GameData data){
     }
     public void SaveData(GameData data){
-        data._lastLevelIndex = Mathf.Min(SceneManager.GetActiveScene().buildIndex + 1, SceneManager.sceneCountInBuildSettings - 2);
+        data._lastLevelIndex = Mathf.Min(SceneManager.GetActiveScene().buildIndex + 1, SceneManager.sceneCountInBuildSettings - 3);
     }
 }
