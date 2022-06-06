@@ -253,7 +253,28 @@ Sprint 3 Trello linki
 https://trello.com/invite/b/6CWlqSJ5/2b9b8a4f4886beceeec4d0763a7aaabf/sprint-3 
 
 
+# Proje Boyunca Faydalanılan Kaynaklar #
+https://www.chosic.com/free-music/celebration/
 
+https://www.istockphoto.com/tr/search/2/image?phrase=sat%C3%BCrn
+
+https://unsplash.com/s/photos/planet
+
+https://giphy.com/search/space
+
+https://www.flaticon.com/free-icons/video-player
+
+https://www.flaticon.com/free-icons/snowflake
+
+https://www.vecteezy.com/free-vector/level-complete
+
+https://www.cppng.com/
+
+https://assetstore.unity.com/
+
+https://kenney.nl/
+
+https://freesfx.co.uk/sfx/squish
 
 
 
