@@ -19,7 +19,8 @@ public class PaddleController : MonoBehaviour{
     [SerializeField] private bool _leftPaddle;
     [SerializeField] private float _tapDuration;
 
-    private int _detachInputCount = 0;
+    public static int _detachInputCount = 0;
+    private bool _detachInput = false;
     private bool _controllable = false;
     private bool _ballAttached = true;
     private bool _gameStarted = false;
@@ -29,6 +30,7 @@ public class PaddleController : MonoBehaviour{
 
     private void Awake(){
         _startingScale = transform.localScale;
+        _detachInputCount = 0;
     }
     private void Start(){
         //Attach starting balls to this paddle
@@ -72,17 +74,24 @@ public class PaddleController : MonoBehaviour{
             _touchDuration += Time.deltaTime;
             return;
         }
-
         if(touch.phase == TouchPhase.Ended){
             if(_touchDuration <= _tapDuration){
                 if(touch.position.x <= Screen.width / 2 && _leftPaddle && _ballAttached){
                     DetachBalls();
+                    if(!_detachInput){
+                        _detachInputCount++;
+                        _detachInput = true;
+                    }
                 }
                 else if(touch.position.x > Screen.width / 2 && !_leftPaddle && _ballAttached){
                     DetachBalls();
+                    if(!_detachInput){
+                        _detachInputCount++;
+                        _detachInput = true;
+                    }
                 }
 
-                _detachInputCount++;
+                
                 if(_detachInputCount >= 2){
                     _spawnArea.StartSpawning();
                     _gameStarted = true;

@@ -49,3 +49,4 @@ MonoBehaviour:
   _remainingTime: 35
   _startingFreezeBallsCount: 3
   _rewardedAdFreezeRewardAmount: 2
+  _levelCompleteScreen: {fileID: 0}

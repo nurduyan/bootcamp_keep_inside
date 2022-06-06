@@ -110,4 +110,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: beee9fba3ad2d67479edd6aa6134d4f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _timeToDestroyWithoutPickup: 20
+  _timeToDestroyWithoutPickup: 12

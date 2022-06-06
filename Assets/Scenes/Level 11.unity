@@ -485,11 +485,11 @@ PrefabInstance:
       objectReference: {fileID: 1634369665}
     - target: {fileID: 3086317872726689045, guid: df9c650303d3c7d4c8d9175a4f6a7cbf, type: 3}
       propertyPath: _maxSpawnTime
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3086317872726689045, guid: df9c650303d3c7d4c8d9175a4f6a7cbf, type: 3}
       propertyPath: _minSpawnTime
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3086317872726689045, guid: df9c650303d3c7d4c8d9175a4f6a7cbf, type: 3}
       propertyPath: _otherSpawnArea
@@ -792,7 +792,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d863eb52891917f4ca8708b24ee6d682, type: 2}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: _startingSpeed
-      value: 7.5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: wallCollisionSound
@@ -963,11 +963,11 @@ PrefabInstance:
       objectReference: {fileID: 1255423259}
     - target: {fileID: 3086317872726689045, guid: df9c650303d3c7d4c8d9175a4f6a7cbf, type: 3}
       propertyPath: _maxSpawnTime
-      value: 15
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3086317872726689045, guid: df9c650303d3c7d4c8d9175a4f6a7cbf, type: 3}
       propertyPath: _minSpawnTime
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3086317872726689045, guid: df9c650303d3c7d4c8d9175a4f6a7cbf, type: 3}
       propertyPath: _otherSpawnArea
@@ -1342,7 +1342,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d863eb52891917f4ca8708b24ee6d682, type: 2}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: _startingSpeed
-      value: 7.5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: wallCollisionSound

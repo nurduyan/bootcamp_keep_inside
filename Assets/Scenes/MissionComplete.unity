@@ -150,7 +150,7 @@ RectTransform:
   m_GameObject: {fileID: 209327218}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 0.929894, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 920601590}
@@ -158,8 +158,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -1.2849731}
-  m_SizeDelta: {x: 0, y: 24.266098}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &209327220
 MonoBehaviour:
@@ -376,7 +376,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753458582}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 3b939139fa3c749489c4ba6f2e59edc8, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: ddbfff93cc1d3044b8a6d50096abad39, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -389,15 +389,17 @@ VideoPlayer:
   m_DataSource: 0
   m_PlaybackSpeed: 1
   m_AudioOutputMode: 2
-  m_TargetAudioSources: []
-  m_DirectAudioVolumes: []
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
   m_Url: 
-  m_EnabledAudioTracks: 
-  m_DirectAudioMutes: 
-  m_ControlledAudioTrackCount: 0
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
   m_PlayOnAwake: 1
   m_SkipOnDrop: 1
-  m_Looping: 1
+  m_Looping: 0
   m_WaitForFirstFrame: 1
   m_FrameReadyEventEnabled: 0
   m_VideoShaders: []
@@ -757,6 +759,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1597250556 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1394023102284513665, guid: f6f91a8da8c507540ac32f781949d0b8, type: 3}
+  m_PrefabInstance: {fileID: 1814507966}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1597250559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1597250556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fe545dd7c437684cb962f10eeaa6afb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fadeOutStartTime: 13
+  _fadeOutDuration: 6
+  _targetVolume: 0
 --- !u!1001 &1619778185
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -6047,10 +6047,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TransparentScreen
       objectReference: {fileID: 0}
-    - target: {fileID: 3262197179525258997, guid: 24dbb231d4c985d4183a93ce858bf528, type: 3}
-      propertyPath: m_UiScaleMode
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3262197179525258999, guid: 24dbb231d4c985d4183a93ce858bf528, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -6182,10 +6178,6 @@ PrefabInstance:
     - target: {fileID: 3262197180344444062, guid: 24dbb231d4c985d4183a93ce858bf528, type: 3}
       propertyPath: m_Text
       value: MENU
-      objectReference: {fileID: 0}
-    - target: {fileID: 3262197180536320136, guid: 24dbb231d4c985d4183a93ce858bf528, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3262197180769452464, guid: 24dbb231d4c985d4183a93ce858bf528, type: 3}
       propertyPath: m_LocalScale.x

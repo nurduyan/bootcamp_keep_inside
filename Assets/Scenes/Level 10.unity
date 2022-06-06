@@ -826,7 +826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3086317872726689045, guid: df9c650303d3c7d4c8d9175a4f6a7cbf, type: 3}
       propertyPath: _minSpawnTime
-      value: 12
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3086317872726689045, guid: df9c650303d3c7d4c8d9175a4f6a7cbf, type: 3}
       propertyPath: _otherSpawnArea
@@ -990,7 +990,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: de90477489802e149ba8952a7ff0a4be, type: 2}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: _startingSpeed
-      value: 7.5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: wallCollisionSound
@@ -1364,7 +1364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3086317872726689045, guid: df9c650303d3c7d4c8d9175a4f6a7cbf, type: 3}
       propertyPath: _minSpawnTime
-      value: 12
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3086317872726689045, guid: df9c650303d3c7d4c8d9175a4f6a7cbf, type: 3}
       propertyPath: _otherSpawnArea
@@ -1658,7 +1658,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: de90477489802e149ba8952a7ff0a4be, type: 2}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: _startingSpeed
-      value: 7.5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: wallCollisionSound

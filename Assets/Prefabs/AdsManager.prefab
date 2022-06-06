@@ -46,4 +46,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _androidGameId: 4773337
   _testMode: 1
-  _maxLevelOrDeathCountBeforeShowingAds: 3
+  _maxLevelOrDeathCountBeforeShowingAds: 5

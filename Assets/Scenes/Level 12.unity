@@ -1154,7 +1154,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 41d1b5548a895aa498e5821111b80967, type: 2}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: _startingSpeed
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: wallCollisionSound
@@ -1490,7 +1490,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 41d1b5548a895aa498e5821111b80967, type: 2}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: _startingSpeed
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: wallCollisionSound

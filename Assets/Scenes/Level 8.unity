@@ -271,7 +271,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: fa23b60b191f43346852e670a217371f, type: 2}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: _startingSpeed
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: wallCollisionSound
@@ -850,11 +850,11 @@ PrefabInstance:
       objectReference: {fileID: 170383302}
     - target: {fileID: 3086317872726689045, guid: df9c650303d3c7d4c8d9175a4f6a7cbf, type: 3}
       propertyPath: _maxSpawnTime
-      value: 13
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3086317872726689045, guid: df9c650303d3c7d4c8d9175a4f6a7cbf, type: 3}
       propertyPath: _minSpawnTime
-      value: 8
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3086317872726689045, guid: df9c650303d3c7d4c8d9175a4f6a7cbf, type: 3}
       propertyPath: _otherSpawnArea
@@ -1244,7 +1244,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: fa23b60b191f43346852e670a217371f, type: 2}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: _startingSpeed
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: wallCollisionSound
@@ -1476,11 +1476,11 @@ PrefabInstance:
       objectReference: {fileID: 444050584612144611}
     - target: {fileID: 3086317872726689045, guid: df9c650303d3c7d4c8d9175a4f6a7cbf, type: 3}
       propertyPath: _maxSpawnTime
-      value: 13
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3086317872726689045, guid: df9c650303d3c7d4c8d9175a4f6a7cbf, type: 3}
       propertyPath: _minSpawnTime
-      value: 8
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3086317872726689045, guid: df9c650303d3c7d4c8d9175a4f6a7cbf, type: 3}
       propertyPath: _otherSpawnArea
