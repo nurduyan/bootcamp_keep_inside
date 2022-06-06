@@ -752,7 +752,7 @@ PrefabInstance:
     - target: {fileID: 2716553280254920396, guid: 160a4f1d5d2fae6418a4e567f33c9565, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: db9428e941dad2c48b6d8eaaa2c82179, type: 2}
+      objectReference: {fileID: 2100000, guid: b16b169f37cbae74ea68e63840d4f186, type: 2}
     - target: {fileID: 2716553280254920398, guid: 160a4f1d5d2fae6418a4e567f33c9565, type: 3}
       propertyPath: m_Name
       value: Uzay
@@ -1437,7 +1437,7 @@ PrefabInstance:
     - target: {fileID: 7696552579557444352, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 1325aefbdb3170d43985f16b90855aa9, type: 2}
+      objectReference: {fileID: 2100000, guid: 41aa75edca649c945bdd6cf7e6cc7397, type: 2}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: wallCollisionSound
       value: 
@@ -1453,7 +1453,7 @@ PrefabInstance:
     - target: {fileID: 8853183387674128062, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: abd9a242769c23c47a08acd9bcd18412, type: 2}
+      objectReference: {fileID: 2100000, guid: 41aa75edca649c945bdd6cf7e6cc7397, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
 --- !u!114 &1255423259 stripped
@@ -1784,7 +1784,7 @@ PrefabInstance:
     - target: {fileID: 7696552579557444352, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 1325aefbdb3170d43985f16b90855aa9, type: 2}
+      objectReference: {fileID: 2100000, guid: 41aa75edca649c945bdd6cf7e6cc7397, type: 2}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: wallCollisionSound
       value: 
@@ -1800,7 +1800,7 @@ PrefabInstance:
     - target: {fileID: 8853183387674128062, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: abd9a242769c23c47a08acd9bcd18412, type: 2}
+      objectReference: {fileID: 2100000, guid: 41aa75edca649c945bdd6cf7e6cc7397, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
 --- !u!114 &1634369665 stripped
@@ -2476,7 +2476,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 1325aefbdb3170d43985f16b90855aa9, type: 2}
+  - {fileID: 2100000, guid: f586bce1587233347a90a9426ca2d9ef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

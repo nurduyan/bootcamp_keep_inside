@@ -56,4 +56,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RetryGameScene.unity
     guid: c9ad26acb4f64084f948dc4438a8ffcd
+  - enabled: 1
+    path: Assets/Scenes/Developers.unity
+    guid: c6d052a71d114b548a9d6b8329481c52
+  - enabled: 1
+    path: Assets/Scenes/MissionComplete.unity
+    guid: d177d15de5bc88c4e9c48da3e9fc93d7
   m_configObjects: {}

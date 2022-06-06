@@ -1062,6 +1062,10 @@ PrefabInstance:
       propertyPath: glueEffect
       value: 
       objectReference: {fileID: 1255423260}
+    - target: {fileID: 1866966914884947681, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: df8ce7902bb733742b730a2ebe7658e1, type: 2}
     - target: {fileID: 4028049040266784706, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1110,6 +1114,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paddle
       objectReference: {fileID: 0}
+    - target: {fileID: 7696552579557444352, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ef1bb0e2a9742e044a92009807e37f01, type: 2}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: wallCollisionSound
       value: 
@@ -1125,7 +1133,7 @@ PrefabInstance:
     - target: {fileID: 8853183387674128062, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7f8a85e44eb0d8a4eb095dd0e8f905d7, type: 2}
+      objectReference: {fileID: 2100000, guid: ef1bb0e2a9742e044a92009807e37f01, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
 --- !u!114 &1255423259 stripped
@@ -1490,7 +1498,7 @@ PrefabInstance:
     - target: {fileID: 1866966914884947681, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: cda1bd43beb7f4744b19131f4a075e3c, type: 2}
+      objectReference: {fileID: 2100000, guid: df8ce7902bb733742b730a2ebe7658e1, type: 2}
     - target: {fileID: 1866966914884947681, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: m_Parameters.numCapVertices
       value: 90
@@ -1551,6 +1559,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paddle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7696552579557444352, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: ef1bb0e2a9742e044a92009807e37f01, type: 2}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: _startingSpeed
       value: 5
@@ -1570,7 +1582,7 @@ PrefabInstance:
     - target: {fileID: 8853183387674128062, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7f8a85e44eb0d8a4eb095dd0e8f905d7, type: 2}
+      objectReference: {fileID: 2100000, guid: ef1bb0e2a9742e044a92009807e37f01, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
 --- !u!114 &1634369665 stripped
@@ -1705,7 +1717,7 @@ PrefabInstance:
     - target: {fileID: 2716553280254920396, guid: 160a4f1d5d2fae6418a4e567f33c9565, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 49f9757a7691ea7449aa93333ab33784, type: 2}
+      objectReference: {fileID: 2100000, guid: b751e745d8e875f42b824ab0f5d30b99, type: 2}
     - target: {fileID: 2716553280254920398, guid: 160a4f1d5d2fae6418a4e567f33c9565, type: 3}
       propertyPath: m_Name
       value: Uzay
@@ -2672,7 +2684,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: bd9110bd0f70d0f4e8a1c39694c0f696, type: 2}
+  - {fileID: 2100000, guid: 2010fb6a5d04b6f4295df1bb42b2c999, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

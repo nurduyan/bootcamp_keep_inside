@@ -33,6 +33,11 @@ public class Options : MonoBehaviour, IDataPersistence{
         SceneManager.LoadScene(1);
     }
 
+    public void DeveloperGameButton()
+    {
+        SceneManager.LoadScene(17);
+    }
+        
     public void QuitGameButton()
     {
         Debug.Log("ciktin");

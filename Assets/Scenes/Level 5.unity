@@ -789,7 +789,7 @@ PrefabInstance:
     - target: {fileID: 1866966914884947681, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: df8ce7902bb733742b730a2ebe7658e1, type: 2}
+      objectReference: {fileID: 2100000, guid: c2bffa0008d8b09488b74c9cc8e98c82, type: 2}
     - target: {fileID: 4028049040266784706, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -857,7 +857,7 @@ PrefabInstance:
     - target: {fileID: 8853183387674128062, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e766521b8d9075c4589598edeb3d517d, type: 2}
+      objectReference: {fileID: 2100000, guid: 88bb4be9dd0118a47bcc955a3adcb230, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
 --- !u!114 &1255423259 stripped
@@ -1128,7 +1128,7 @@ PrefabInstance:
     - target: {fileID: 1866966914884947681, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: df8ce7902bb733742b730a2ebe7658e1, type: 2}
+      objectReference: {fileID: 2100000, guid: c2bffa0008d8b09488b74c9cc8e98c82, type: 2}
     - target: {fileID: 4028049040266784706, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1196,7 +1196,7 @@ PrefabInstance:
     - target: {fileID: 8853183387674128062, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e766521b8d9075c4589598edeb3d517d, type: 2}
+      objectReference: {fileID: 2100000, guid: 88bb4be9dd0118a47bcc955a3adcb230, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
 --- !u!114 &1634369665 stripped

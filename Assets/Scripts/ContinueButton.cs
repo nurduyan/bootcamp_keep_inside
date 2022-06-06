@@ -6,7 +6,7 @@ using UnityEngine;
 public class ContinueButton : MonoBehaviour{
     private void Start(){
         if(!DataPersistenceManager.Instance.HasSaveData()){
-            transform.parent.gameObject.SetActive(false);
+            gameObject.SetActive(false);
         }
     }
 }
