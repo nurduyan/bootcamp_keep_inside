@@ -1570,6 +1570,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 657605314586997733, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
   m_PrefabInstance: {fileID: 1634369664}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1648259834 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8778156226729819703, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
+  m_PrefabInstance: {fileID: 313319914}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &60826703232193431
 GameObject:
   m_ObjectHideFlags: 0
@@ -1930,6 +1935,14 @@ PrefabInstance:
       propertyPath: _timerUIText
       value: 
       objectReference: {fileID: 313319915}
+    - target: {fileID: 3007160510159095896, guid: 689b432618d61dc48b71ea314dc2c99c, type: 3}
+      propertyPath: _remainingTime
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007160510159095896, guid: 689b432618d61dc48b71ea314dc2c99c, type: 3}
+      propertyPath: _levelCompleteScreen
+      value: 
+      objectReference: {fileID: 1648259834}
     - target: {fileID: 3007160510159095896, guid: 689b432618d61dc48b71ea314dc2c99c, type: 3}
       propertyPath: _remainingFreezeCountText
       value: 

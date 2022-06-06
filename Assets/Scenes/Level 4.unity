@@ -1702,7 +1702,7 @@ PrefabInstance:
       objectReference: {fileID: 1634369665}
     - target: {fileID: 3086317872726689045, guid: df9c650303d3c7d4c8d9175a4f6a7cbf, type: 3}
       propertyPath: _maxSpawnTime
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3086317872726689045, guid: df9c650303d3c7d4c8d9175a4f6a7cbf, type: 3}
       propertyPath: _minSpawnTime
@@ -1980,6 +1980,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 416581eee1638c84fb94fe9c88c8617e, type: 2}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
+      propertyPath: _startingSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: wallCollisionSound
       value: 
       objectReference: {fileID: 1596411664}
@@ -2086,7 +2090,7 @@ PrefabInstance:
       objectReference: {fileID: 1255423259}
     - target: {fileID: 3086317872726689045, guid: df9c650303d3c7d4c8d9175a4f6a7cbf, type: 3}
       propertyPath: _maxSpawnTime
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3086317872726689045, guid: df9c650303d3c7d4c8d9175a4f6a7cbf, type: 3}
       propertyPath: _minSpawnTime
@@ -2165,6 +2169,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e736d5c00f36c8745b76ff637e4bfc2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1458170626 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8778156226729819703, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
+  m_PrefabInstance: {fileID: 1670222872}
+  m_PrefabAsset: {fileID: 0}
 --- !u!82 &1596411664 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 8771049661112563115, guid: d1552c5c80fe5ac4b9ab4f94282d631d, type: 3}
@@ -2312,6 +2321,10 @@ PrefabInstance:
     - target: {fileID: 8718920533789244598, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: m_VersionIndex
       value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
+      propertyPath: _startingSpeed
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: wallCollisionSound
@@ -3326,8 +3339,12 @@ PrefabInstance:
       objectReference: {fileID: 1670222873}
     - target: {fileID: 3007160510159095896, guid: 689b432618d61dc48b71ea314dc2c99c, type: 3}
       propertyPath: _remainingTime
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
+    - target: {fileID: 3007160510159095896, guid: 689b432618d61dc48b71ea314dc2c99c, type: 3}
+      propertyPath: _levelCompleteScreen
+      value: 
+      objectReference: {fileID: 1458170626}
     - target: {fileID: 3007160510159095896, guid: 689b432618d61dc48b71ea314dc2c99c, type: 3}
       propertyPath: _remainingFreezeCountText
       value: 

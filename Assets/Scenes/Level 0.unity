@@ -501,6 +501,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59177294}
   m_CullTransparentMesh: 1
+--- !u!1 &104566430 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4334357228236841251, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
+  m_PrefabInstance: {fileID: 2055451039}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &156330312
 GameObject:
   m_ObjectHideFlags: 0
@@ -722,7 +727,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: You can watch an ad to get extra freeze powers
+  m_text: You can watch an ad to get extra freeze power
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: deb42ee9fee44db49908c50e481a9fa9, type: 2}
   m_sharedMaterial: {fileID: -4789613403213324585, guid: deb42ee9fee44db49908c50e481a9fa9, type: 2}
@@ -2047,8 +2052,8 @@ MonoBehaviour:
     an area, you will lose.\n\nWe have 13 different levels. Every two level, you'll
     be introduced to a new powerup and you'll have another level to pass with all
     the powerups you unlocked before. \n\nYou are in the introduction level now.\nThis
-    level is just for you to learn controls. If you are ready, lets learn about more
-    about them."
+    level is just for you to learn controls. If you are ready, lets learn more about
+    them."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: deb42ee9fee44db49908c50e481a9fa9, type: 2}
   m_sharedMaterial: {fileID: -4789613403213324585, guid: deb42ee9fee44db49908c50e481a9fa9, type: 2}
@@ -4835,6 +4840,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1930194442}
   m_CullTransparentMesh: 1
+--- !u!1 &1983972541 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8778156226729819703, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
+  m_PrefabInstance: {fileID: 2055451039}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1987324203
 GameObject:
   m_ObjectHideFlags: 0
@@ -5950,6 +5960,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 163319149}
     - target: {fileID: 3007160510159095896, guid: 689b432618d61dc48b71ea314dc2c99c, type: 3}
+      propertyPath: _remainingTime
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007160510159095896, guid: 689b432618d61dc48b71ea314dc2c99c, type: 3}
+      propertyPath: _levelCompleteScreen
+      value: 
+      objectReference: {fileID: 1983972541}
+    - target: {fileID: 3007160510159095896, guid: 689b432618d61dc48b71ea314dc2c99c, type: 3}
       propertyPath: _remainingFreezeCountText
       value: 
       objectReference: {fileID: 2055451040}
@@ -6989,6 +7007,7 @@ MonoBehaviour:
   - {fileID: 216465982}
   - {fileID: 1132857555}
   - {fileID: 2055451041}
+  - {fileID: 104566430}
   _leftFreezeButton: {fileID: 1536448753}
   _rightFreezeButton: {fileID: 216465984}
   _rewardedAdButton: {fileID: 1132857556}

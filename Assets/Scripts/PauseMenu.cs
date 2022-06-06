@@ -33,6 +33,9 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
+        foreach (PaddleController paddle in FindObjectsOfType<PaddleController>()){
+            paddle.EnableControls(0);
+        }
         IsGamePaused = false;
         timer_text.SetActive(true);
         LeftFreeze.SetActive(true);

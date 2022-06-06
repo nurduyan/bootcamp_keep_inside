@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,6 +19,9 @@ public class GameflowManager : MonoBehaviour, IDataPersistence{
     private GameObject _starter = null;
     private GameObject _stopper = null;
 
+    private void Awake(){
+        Time.timeScale = 1;
+    }
     private void Start(){
         if(DataPersistenceManager.Instance != null){
             DataPersistenceManager.Instance.LoadGame();
@@ -87,10 +91,14 @@ public class GameflowManager : MonoBehaviour, IDataPersistence{
             _timerUIText.text = ((int)_remainingTime).ToString();
             if(_remainingTime <= 0){
                 _timerUIText.text = "";
-                if(DataPersistenceManager.Instance != null){
-                    DataPersistenceManager.Instance.SaveGame();
+                if(!_levelCompleteScreen.activeSelf){
+                    AudioListener.volume = 0;
                 }
 
+                Time.timeScale = 0;
+                foreach (PaddleController paddle in FindObjectsOfType<PaddleController>()){
+                    paddle.DisableControls();
+                }
                 _levelCompleteScreen.SetActive(true);
             }
         }

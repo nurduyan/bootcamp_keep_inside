@@ -113,7 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _defaultBallPrefab: {fileID: 8547355003439731578, guid: 7710d22fdbd032340a240cabc1555998, type: 3}
-  _timeToDestroyWithoutPickup: 10
+  _timeToDestroyWithoutPickup: 20
   transparentWall: {fileID: 0}
 --- !u!114 &-3911031121094684263
 MonoBehaviour:

@@ -34,6 +34,13 @@ public class DataPersistenceManager : MonoBehaviour{
         if(!PlayerPrefs.HasKey("first_start")){
             PlayerPrefs.SetInt("first_start", 1);
         }
+
+        if(PlayerPrefs.HasKey("volume")){
+            AudioListener.volume = PlayerPrefs.GetFloat("volume");
+        }
+        else{
+            PlayerPrefs.SetFloat("volume", 50);
+        }
         Application.targetFrameRate = 60;
         _dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, useEncryption);
     }
@@ -50,7 +57,6 @@ public class DataPersistenceManager : MonoBehaviour{
     public void OnSceneLoaded(Scene scene, LoadSceneMode mode) 
     {
         _dataPersistenceObjects = FindAllDataPersistenceObjects();
-        AudioListener.volume = LoadVolumePref();
     }
     
     public void NewGame(){

@@ -319,6 +319,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2733e931e869654eaf1f460c6e2f34d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &191164675 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8778156226729819703, guid: 59c8b3df28555814bac20f449c216af5, type: 3}
+  m_PrefabInstance: {fileID: 836875923}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &299531504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1180,7 +1185,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 6def78df22295484db625f9b6df27837, type: 2}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: _startingSpeed
-      value: 2
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: wallCollisionSound
@@ -1667,7 +1672,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 6def78df22295484db625f9b6df27837, type: 2}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: _startingSpeed
-      value: 2
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 8853183387674128049, guid: e248265597e2ce745b519a73ca5a88dd, type: 3}
       propertyPath: wallCollisionSound
@@ -2006,6 +2011,14 @@ PrefabInstance:
       propertyPath: _timerUIText
       value: 
       objectReference: {fileID: 836875924}
+    - target: {fileID: 3007160510159095896, guid: 689b432618d61dc48b71ea314dc2c99c, type: 3}
+      propertyPath: _remainingTime
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3007160510159095896, guid: 689b432618d61dc48b71ea314dc2c99c, type: 3}
+      propertyPath: _levelCompleteScreen
+      value: 
+      objectReference: {fileID: 191164675}
     - target: {fileID: 3007160510159095896, guid: 689b432618d61dc48b71ea314dc2c99c, type: 3}
       propertyPath: _remainingFreezeCountText
       value: 

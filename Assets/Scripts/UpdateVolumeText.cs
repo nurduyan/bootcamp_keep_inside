@@ -20,5 +20,6 @@ public class UpdateVolumeText : MonoBehaviour{
     public void UpdateVolume(float volume){
         _volumeText.text = ((int)(volume * 100)).ToString();
         DataPersistenceManager.Instance.SaveVolumePref(volume);
+        AudioListener.volume = volume;
     }
 }

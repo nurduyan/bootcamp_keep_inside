@@ -112,9 +112,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c419874a9a9786741afb3d0a51d0332a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _pickupDuration: 1.5
-  _timeToDestroyWithoutPickup: 20
-  freezeEffect: {fileID: 2568480608324682837, guid: 3b6db46221c36614096b2cd2ab4ae8da, type: 3}
+  _pickupDuration: 1
+  _timeToDestroyWithoutPickup: 15
 --- !u!114 &7218385513980335186
 MonoBehaviour:
   m_ObjectHideFlags: 0

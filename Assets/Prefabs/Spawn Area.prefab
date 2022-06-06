@@ -71,8 +71,8 @@ MonoBehaviour:
   - {fileID: 2406964134692339471, guid: 71ea5034845fcb643b745520960954a9, type: 3}
   - {fileID: 2406964134692339471, guid: 7dab6e80a843b6e49833e750450aaea8, type: 3}
   _otherSpawnArea: {fileID: 0}
-  _minSpawnTime: 10
-  _maxSpawnTime: 20
+  _minSpawnTime: 5
+  _maxSpawnTime: 10
   _spawnHeightFromGround: 1
   _maxRandomSpawnTryTime: 0.1
   _freezeBallsDuration: 2
