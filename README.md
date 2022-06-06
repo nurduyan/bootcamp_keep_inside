@@ -232,6 +232,8 @@ Sprint 3 Daily Scrum Chat ScreenShots
 ![WhatsApp Image 2022-06-06 at 12 07 57](https://user-images.githubusercontent.com/96583962/172169649-bb7ef478-b007-4c3a-a133-59963916a574.jpeg)
 ![Screenshot_20220606-164351_Keep Inside](https://user-images.githubusercontent.com/96583962/172172995-070312cd-ecca-4c3f-b784-cc83b58128f1.jpeg)
 ![Screenshot_20220606-164142_Keep Inside](https://user-images.githubusercontent.com/96583962/172173025-f1b2cdf4-22c7-4b59-b0ae-4e52f2b728b6.jpeg)
+![WhatsApp Image 2022-06-06 at 16 49 24](https://user-images.githubusercontent.com/96583962/172180117-8f4bb823-aa3c-4f7d-bbe1-e47bb82c7d5b.jpeg)
+
 
 
 Sprint board update: Sprint board screenshotları:
@@ -241,7 +243,7 @@ Sprint board update: Sprint board screenshotları:
 
 Sprint Review: Alınan kararlar: Son sprint olduğu için projemizde bize fayda sağlayacağını düşündüğümüz birçok değişiklik yaptık. Başlangıçta daha dikkatli davransaydık son zamanlarda fazla değişiklik yapmamış olurduk. Hepimizin ilk oyun deneyimi olduğu için bunları normal karşılayıp tecrübe edindiğimize karar verdik.
 
-Sprint Review katılımcıları: Fatma Nur Duyan, Niyazi Ural, Ali Safa Gür, Sena Nur Durgunlu, Enis Buğra Bulut
+Sprint Review katılımcıları: Fatma Nur Duyan, Niyazi Ural, Ali Safa Gür, Enis Buğra Bulut
 
 Sprint Retrospective:
 Projeyi sonlandırırken genel bir değerlendirmede bulunmaya da çalıştık. Takım üyelerinin çoğu deneyimsiz olsada süreci genel anlamda başarıyla idare ettiğimize karar verdik. Proje sürecini iyi bir çıktıyla bitiriyor olmak bizleri gerçekten memnun etti. Takımımızda bir tasarımcı yoktu bu yüzden tasarımla ilgili konuları birlikte yapmaya daha önem verdik. Bireysel anlamda farklı alanlarda olan deneyimlerimizi bu projede hem birbirimizle paylaştık hem de bu alanlardaki tecrübelerimizi geliştirdik. 
