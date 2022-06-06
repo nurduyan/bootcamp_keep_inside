@@ -39,7 +39,7 @@ public class DataPersistenceManager : MonoBehaviour{
             AudioListener.volume = PlayerPrefs.GetFloat("volume");
         }
         else{
-            PlayerPrefs.SetFloat("volume", 50);
+            PlayerPrefs.SetFloat("volume", 0.5f);
         }
         Application.targetFrameRate = 60;
         _dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, useEncryption);
