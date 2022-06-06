@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f72a9d1b7b54417459485723484376c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sizeChange: 2
+  _sizeChange: 1.8
   _pickupDuration: 8
   _timeToDestroyWithoutPickup: 20
 --- !u!114 &5747784326204574683
