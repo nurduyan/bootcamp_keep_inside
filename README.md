@@ -195,3 +195,60 @@ Sprint Retrospective:
 Github üzerinde daha koordineli çalışıyoruz.
 İkinci sprint için verilen görevler genel olarak zamanında tamamlandı.
 Karşılaşılan buglar Trello listesine eklenmeye devam edecek herkesin erişiminin olması bu konuda oldukça destekleyici.
+
+
+
+# Sprint 3 #
+
+https://docs.google.com/document/d/167xSSEn6de9sDkztBt2Aed3hepO3n6TpFFLVAen-4nc/edit?usp=sharing
+
+Oyunbazlar - Sprint 3
+
+
+Sprint Notları: Tamamlanan bölümlerin geçişleri, oyun içerisindeki reklamlar, firebase, özelliklerin şekilleri, arayüzlerdeki bütünsellik, görsel efektler ve sesler olmak üzere birçok konuda son noktaya gelindi. Bu sprint boyunca sürekli oyunun çıktısı alındı, farklı cihazlarda denendi ve bug’lar bulunup düzeltildi. Nihayetinde proje tamamlandı. 
+
+Sprint içinde tamamlanması tahmin edilen puan: 140 Puan
+
+Puan tamamlama mantığı: Toplamda proje boyunca tamamlanması gereken 380 puanlık backlog bulunmaktadır. Son Sprint’in puanı önceki sprintlerden 20 puan daha fazladır. Puan olarak bu sprint fazla olsa da yapılması gereken görev sayısı azdı.
+
+Backlog düzeni: Bu kısımda yapılacak işler görece az olmasına rağmen puanları ve önemleri fazlaydı. Özellikle bug’ları bulma ve onları düzeltme projeyi sonlandırmak için son derece önemliydi.
+
+Oyun projemiz bu sprint sonunda sonlanırken yapılması gereken oyun tanıtım videosu için 2 gün ayrılmış bulunmakta. Sprint bu videonun yapımından önce sonlanacak olsa da video 2 gün içerisinde hazırlanacak.
+
+Daily Scrum: Son sprintle beraber projenin sonuna yaklaşıldığı için ekip içi iletişim yoğunlaştı. Birçok konuda son kararlar verilirken herkesin görüş ve düşüncesi alınması için Whatsapp yazışmaları daha önemli hale geldi. Haftalık Cuma günü toplantıları da devam etmekteydi. Daily Scrum toplantısı örneği jpeg olarak Readme'de tarafımızdan paylaşılmaktadır: 
+
+Sprint 3 Daily Scrum Chat ScreenShots
+<img width="993" alt="Screen Shot 2022-06-06 at 16 17 47" src="https://user-images.githubusercontent.com/96583962/172168724-61797eb4-5385-4d7d-a384-88b230d5e6ef.png">
+<img width="1001" alt="Screen Shot 2022-06-06 at 16 19 57" src="https://user-images.githubusercontent.com/96583962/172168736-29c93688-dbac-4186-b2fd-647b210c25a7.png">
+<img width="996" alt="Screen Shot 2022-06-06 at 16 21 41" src="https://user-images.githubusercontent.com/96583962/172169291-3498fd08-7c5d-4bbe-b25b-b316e925667c.png">
+<img width="1105" alt="Screen Shot 2022-06-06 at 16 19 33" src="https://user-images.githubusercontent.com/96583962/172169309-9671be3a-086f-4665-b406-735bd2d632e6.png">
+
+Ürün Fotoğrafları
+
+![WhatsApp Image 2022-06-06 at 12 07 57](https://user-images.githubusercontent.com/96583962/172169649-bb7ef478-b007-4c3a-a133-59963916a574.jpeg)
+![Screenshot_20220606-164351_Keep Inside](https://user-images.githubusercontent.com/96583962/172172995-070312cd-ecca-4c3f-b784-cc83b58128f1.jpeg)
+![Screenshot_20220606-164142_Keep Inside](https://user-images.githubusercontent.com/96583962/172173025-f1b2cdf4-22c7-4b59-b0ae-4e52f2b728b6.jpeg)
+
+
+Sprint board update: Sprint board screenshotları:
+<img width="1142" alt="Screen Shot 2022-06-06 at 16 28 29" src="https://user-images.githubusercontent.com/96583962/172169998-f3d772a8-216f-4d7e-916b-96b702dabd01.png">
+<img width="1156" alt="Screen Shot 2022-06-06 at 16 28 44" src="https://user-images.githubusercontent.com/96583962/172170185-a64d3619-127d-4758-9eb4-9c3f75e020cc.png">
+
+
+Sprint Review: Alınan kararlar: Son sprint olduğu için projemizde bize fayda sağlayacağını düşündüğümüz birçok değişiklik yaptık. Başlangıçta daha dikkatli davransaydık son zamanlarda fazla değişiklik yapmamış olurduk. Hepimizin ilk oyun deneyimi olduğu için bunları normal karşılayıp tecrübe edindiğimize karar verdik.
+
+Sprint Review katılımcıları: Fatma Nur Duyan, Niyazi Ural, Ali Safa Gür, Sena Nur Durgunlu, Enis Buğra Bulut
+
+Sprint Retrospective:
+Projeyi sonlandırırken genel bir değerlendirmede bulunmaya da çalıştık. Takım üyelerinin çoğu deneyimsiz olsada süreci genel anlamda başarıyla idare ettiğimize karar verdik. Proje sürecini iyi bir çıktıyla bitiriyor olmak bizleri gerçekten memnun etti. Takımımızda bir tasarımcı yoktu bu yüzden tasarımla ilgili konuları birlikte yapmaya daha önem verdik. Bireysel anlamda farklı alanlarda olan deneyimlerimizi bu projede hem birbirimizle paylaştık hem de bu alanlardaki tecrübelerimizi geliştirdik. 
+Son Sprint ile beraber proje de tamamlandı.
+
+Sprint 3 Trello linki 
+https://trello.com/invite/b/6CWlqSJ5/2b9b8a4f4886beceeec4d0763a7aaabf/sprint-3 
+
+
+
+
+
+
+
